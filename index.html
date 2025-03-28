@@ -297,24 +297,87 @@
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
+            body {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .header {
+                padding: 2rem 0;
+                margin-bottom: 2rem;
             }
 
             .header h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 1.75rem;
-            }
-            
-            .card-body {
-                padding: 1.5rem;
+                font-size: 2rem;
             }
 
-            .section-spacing {
-                margin-bottom: 3rem;
+            .header p {
+                font-size: 1rem;
+            }
+
+            .container {
+                max-width: 90vw; /* Reduce the maximum width for tablets and smaller devices */
+                padding: 0 1rem; /* Reduce side padding */
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .card-body {
+                padding: 1rem;
+            }
+
+            .project-banner {
+                height: 200px;
+            }
+
+            .contact-icon {
+                font-size: 2.5rem;
+            }
+
+            .contact-text {
+                font-size: 0.9rem;
+            }
+
+            .carousel-control-prev.custom-carousel-control,
+            .carousel-control-next.custom-carousel-control {
+                width: 40px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 1.75rem;
+            }
+
+            .header p {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                max-width: 95vw; /* Further reduce the maximum width for smaller screens */
+                padding: 0 0.5rem; /* Minimize side padding */
+            }
+
+            .section-title {
+                font-size: 1.25rem;
+            }
+
+            .card-title {
+                font-size: 1.25rem;
+            }
+
+            .project-banner {
+                height: 150px;
+            }
+
+            .contact-icon {
+                font-size: 2rem;
+            }
+
+            .contact-text {
+                font-size: 0.8rem;
             }
         }
     </style>
