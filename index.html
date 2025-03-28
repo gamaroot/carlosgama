@@ -33,7 +33,6 @@
         }
 
         .header {
-            background: linear-gradient(135deg, #2c3e50, #1a1a1a);
             color: white;
             padding: 3rem 0;
             margin-bottom: 3rem;
@@ -41,16 +40,6 @@
             width: 100%;
             position: relative;
             overflow: hidden;
-        }
-
-        .header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
         }
 
         .container {
@@ -110,7 +99,6 @@
             border-radius: 12px;
             box-shadow: var(--card-shadow);
             transition: all var(--transition-speed);
-            margin-bottom: 1.5rem;
             overflow: hidden;
             background-color: var(--card-bg);
             position: relative;
@@ -164,22 +152,16 @@
             font-size: 0.95rem;
             font-weight: normal;
         }
-
+        
         .project-banner {
             width: 100%;
-            height: 200px;
+            height: 256px;
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 1.5rem;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transform-origin: center;
-        }
-
-        .project-banner {
-            width: 100%;
-            height: 200px;
             transition: height 0.3s ease, box-shadow 0.3s ease;
+            transform-origin: center;
         }
 
         .contact-info a {
@@ -192,34 +174,8 @@
             color: var(--accent-color);
         }
 
-        .footer {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-            padding: 2rem 0;
-            margin-top: 4rem;
-            width: 100%;
-            position: relative;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
-        }
-
-        ul {
-            padding-left: 1.5rem;
-            color: var(--text-color);
-            margin-bottom: 0;
-        }
-
         li {
-            margin-bottom: 0.75rem;
-            position: relative;
+            margin-bottom: 0.5rem;
         }
 
         .portfolio-link {
@@ -296,6 +252,48 @@
 
         .contact-card:hover .contact-text {
             color: var(--secondary-color);
+        }
+
+        #projectsCarousel .carousel-inner {
+            transition: height 0.3s ease;
+        }
+
+        .carousel-item {
+            transform: none !important;
+        }
+
+        .carousel-item {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+        }
+
+        .custom-carousel-control {
+            width: 50px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .carousel-control-prev.custom-carousel-control {
+            left: -60px;
+        }
+
+        .carousel-control-next.custom-carousel-control {
+            right: -60px;
+        }
+
+        .custom-carousel-control:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         @media (max-width: 768px) {
@@ -384,7 +382,7 @@
                     <h4 class="card-title">Mobile Game Developer <span class="date-text">(Sep 2015 - Dec 2021)</span></h4>
                     <p class="company-text">Gazeus Games, Rio de Janeiro - Brazil</p>
                     <ul>
-                        <li>Worked on the most popular classic card game in Brazil, Buraco Jogatina, and other mobile games.</li>
+                        <li>Worked on the most popular classic card game in Brazil, Buraco Jogatina, and other mobile games using Unity, Lua, AndEngine, Android Java/Kotlin, Objective-C.</li>
                         <li>Developed the AutoBuilder tool (JavaFX + Bash Shell Scripting) for automating app builds.</li>
                         <li>Managed core gameplay, multiplayer systems, ads, and analytics integration using Unity and SmartFox Server.</li>
                     </ul>
@@ -458,97 +456,130 @@
         <section>
             <h2 class="section-title"><i class="bi bi-controller"></i> Projects</h2>
 
-            <div class="card mb-4">
-                <div class="card-body">
-                    <img src="./assets/buraco-banner.jpg" alt="Buraco Jogatina Banner" class="project-banner">
-                    <h4 class="card-title"><a href="https://apps.jogatina.com/en/buraco/" target="_blank">Buraco Jogatina - Android/iOS (Unity)</a></h4>
-                    <p>Worked as an Android & Unity Developer for over 5 years. Responsibilities included migrating the project to Unity, implementing multiplayer, ads, analytics, and more.</p>
+            <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card-body">
+                            <img src="./assets/buraco-banner.jpg" alt="Buraco Jogatina" class="project-banner">
+                            <h4 class="card-title"><a href="https://apps.jogatina.com/en/buraco/" target="_blank">Buraco Jogatina - Android/iOS (Unity)</a></h4>
+                            <p>Implemented the game and migrated it from AndEngine to Unity:</p>
+                            <ul>
+                                <li>Worked on single/multiplayer core gameplay and bots using Lua.</li>
+                                <li>Integrated multiplayer using SmartFox.</li>
+                                <li>Integrated Chat & Emoji features with animations created through Spine.</li>
+                                <li>Integrated Ads, Analytics, Push, Local Notifications, and Debug Mode tools.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <img src="./assets/dominoes-battle-banner.jpg" alt="Dominoes Battle" class="project-banner">
+                            <h4 class="card-title"><a href="https://apps.jogatina.com/en/dominoes-battle/" target="_blank">Dominoes Battle - Android/iOS (PixJS + Native Bridge)</a></h4>
+                            <p>Implemented Android and iOS native solutions, such as internal and 3rd party tools integrations, deep linking and solved Apple privacy compliances.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <img src="./assets/dominoes-banner.jpg" alt="Dominoes Jogatina" class="project-banner">
+                            <h4 class="card-title"><a href="https://apps.jogatina.com/en/dominoes/" target="_blank">Dominoes Jogatina - Android/iOS (Unity)</a></h4>
+                            <p>Worked on implementing seasonal promotions, ads, and analytics.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <img src="./assets/blackjack-banner.jpg" alt="Blackjack Jogatina" class="project-banner">
+                            <h4 class="card-title"><a href="https://apps.jogatina.com/en/blackjack/" target="_blank">Blackjack Jogatina - Android/iOS (Unity)</a></h4>
+                            <p>Implemented daily missions/rewards, integrated ads, analytics and push notification.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <img src="./assets/solitaire_town-banner.jpg" alt="Solitaire Town" class="project-banner">
+                            <h4 class="card-title"><a href="https://apps.jogatina.com/en/solitaire-town/" target="_blank">Solitaire Town - Android/iOS (Unity)</a></h4>
+                            <p>Implemented the game, integrated ads, analytics and push notification.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <img src="./assets/autobuilder-banner.jpg" alt="Auto Builder" class="project-banner">
+                            <h4 class="card-title"><a href="#" target="_blank">AutoBuilder - Windows/MacOS (Java FX / Bash Scripting)</a></h4>
+                            <p>Developed a tool that generates Android/iOS apps from a JavaScript game project:</p>
+                            <ul>
+                                <li>Provides both local and CI build pipelines.</li>
+                                <li>Displays the log from connected device.</li>
+                                <li>Integrated Firebase App Distribution.</li>
+                                <li>Automatically generates release notes (commits + dependencies).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <img src="./assets/armies-and-ants-banner.jpg" alt="Armies & Ants" class="project-banner">
+                            <h4 class="card-title"><a href="https://www.youtube.com/watch?v=MyXdo-RD3-I" target="_blank">Armies & Ants - Android/iOS (Unity)</a></h4>
+                            <p>Worked on a chat system using SmartFox.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <img src="./assets/viral-collapse-banner.jpg" alt="Viral College" class="project-banner">
+                            <h4 class="card-title"><a href="https://www.youtube.com/watch?v=5VC7qEIUKDE" target="_blank">Viral Collapse - Android/iOS (NgCore - JavaScript)</a></h4>
+                            <p>Developed some powerups, daily bonus with a spin machine and fixed legacy bugs.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <img src="./assets/carnablocos-run-banner.jpg" alt="CarnaBlocos Run" class="project-banner">
+                            <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.carnablocos" target="_blank">CarnaBlocos - Android/iOS (Unity)</a></h4>
+                            <p>Developed and monetized a 2D Infinite Runner game. Implemented GameSparks for login and global rankings and integrated multiple ad networks for monetization.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <img src="./assets/pixel-brawl-banner.jpg" alt="Pixel Brawl" class="project-banner">
+                            <h4 class="card-title"><a href="https://carlosgama.itch.io/pixel-brawl" target="_blank">Pixel Brawl - Windows (Unity)</a></h4>
+                            <p class="card-text"><strong>Presentation Slides:</strong> <a href="https://docs.google.com/presentation/d/1C03R1gT_Jifr8liHOEu1Q50PDrE5WtAtbg-Ee_v6fQw/edit#slide=id.g2d6ad56c6bd_0_452" target="_blank">Google Slides</a></p>
+                            <p><strong>Demo:</strong> <a href="https://youtu.be/17__qGoin3c" target="_blank">YouTube Video</a></p>
+                            <p>Academic project for my Game Programming course at Centennial College. A roguelite shooter inspired by classics like The Binding of Isaac and Enter the Gungeon. Players battle enemies in randomly generated rooms. I worked for 3 months on this game for PC using Unity.</p>
+                            <ul>
+                                <li>Implemented player controller using new Unity's Input System with Gamepad and Keyboard/Mouse support.</li>
+                                <li>Implemented Gamepad and Keyboard/Mouse UI Navigation support.</li>
+                                <li>Implemented procedural map generation.</li>
+                                <li>Used Unity Internationalization System for 7 languages.</li>
+                                <li>Designed AI using Unity's Behavior System.</li>
+                                <li>Used Shader Graph for health feedback.</li>
+                                <li>Implemented mechanics such as move, shoot, parry and dash with invincibility frames</li>
+                                <li>Developed Debug Mode for testing all features.</li>
+                                <li>Structured the project in modules using Assembly Definition.</li>
+                                <li>Wrote Play/Edit Mode automated tests.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-body">
+                            <img src="./assets/idle-wars-banner.jpg" alt="Idle Wars" class="project-banner">
+                            <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.devjim.idle.wars&hl=en_CA" target="_blank">Idle Wars: Defend the Galaxy - Android (Unity)</a></h4>
+                            <p>Academic project for my Game Programming course at Centennial College. Idle game with an auto-shooting mechanic, where players upgrade their weapons to defeat waves of enemies.</p>
+                            <ul>
+                                <li>Implemented GDPR compliance using Google UMP.</li>
+                                <li>Implemented monetization via Adaptive Banner and Rewarded Video using AdMob.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <img src="./assets/dominoes-battle-banner.jpg" alt="Dominoes Battle Banner" class="project-banner">
-                    <h4 class="card-title"><a href="https://apps.jogatina.com/en/dominoes-battle/" target="_blank">Dominoes Battle - Android/iOS (PixJS - Native Bridge)</a></h4>
-                    <p>Developed using a custom engine, with responsibilities including automated build processes and integration of ads and analytics.</p>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <img src="./assets/dominoes-banner.jpg" alt="Dominoes Jogatina Banner" class="project-banner">
-                    <h4 class="card-title"><a href="https://apps.jogatina.com/en/dominoes/" target="_blank">Dominoes Jogatina - Android/iOS (Unity)</a></h4>
-                    <p>Worked on implementing seasonal promotions, ads, and analytics.</p>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <img src="./assets/solitaire_town-banner.jpg" alt="Solitaire Town" class="project-banner">
-                    <h4 class="card-title"><a href="https://apps.jogatina.com/en/solitaire-town/" target="_blank">Solitaire Town - Android/iOS (Unity)</a></h4>
-                    <p>Worked on ads integration, building multiplayer features, and making performance improvements.</p>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <img src="./assets/armies-and-ants-banner.jpg" alt="Armies & Ants" class="project-banner">
-                    <h4 class="card-title"><a href="https://www.youtube.com/watch?v=MyXdo-RD3-I" target="_blank">Armies & Ants - Android/iOS (Unity)</a></h4>
-                    <p>Worked on a chat system using SmartFox.</p>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <img src="./assets/viral-collapse-banner.jpg" alt="Viral College" class="project-banner">
-                    <h4 class="card-title"><a href="https://www.youtube.com/watch?v=5VC7qEIUKDE" target="_blank">Viral Collapse - Android/iOS (NgCore - JavaScript)</a></h4>
-                    <p>Developed some powerups, daily bonus with a spin machine and fixed legacy bugs.</p>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <img src="./assets/carnablocos-run-banner.jpg" alt="CarnaBlocos Run" class="project-banner">
-                    <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.carnablocos" target="_blank">CarnaBlocos - Android/iOS (Unity)</a></h4>
-                    <p>Developed and monetized a 2D Infinite Runner game. Implemented GameSparks for login and global rankings and integrated multiple ad networks for monetization.</p>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <img src="./assets/pixel-brawl-banner.jpg" alt="Pixel Brawl" class="project-banner">
-                    <h4 class="card-title"><a href="https://carlosgama.itch.io/pixel-brawl" target="_blank">Pixel Brawl - Windows (Unity)</a></h4>
-                    <p class="card-text"><strong>Presentation Slides:</strong> <a href="https://docs.google.com/presentation/d/1C03R1gT_Jifr8liHOEu1Q50PDrE5WtAtbg-Ee_v6fQw/edit#slide=id.g2d6ad56c6bd_0_452" target="_blank">Google Slides</a></p>
-                    <p><strong>Demo:</strong> <a href="https://youtu.be/17__qGoin3c" target="_blank">YouTube Video</a></p>
-                    <p>Capstone project for my Game Programming course at Centennial College. A roguelike shooter inspired by classics like The Binding of Isaac and Enter the Gungeon. Players battle enemies in randomly generated rooms. I worked for 3 months on this game for PC using Unity.</p>
-                    <ul>
-                        <li>Implemented player controller using Unity's Input System with Gamepad and Keyboard support.</li>
-                        <li>Implemented procedural map generation.</li>
-                        <li>Used Unity Internationalization System for 7 languages.</li>
-                        <li>Designed AI behaviors using Unity's Behavior System.</li>
-                        <li>Implemented various mechanics including health feedback VFX, pickup items, shooting, dash with invincibility frames, and more.</li>
-                        <li>Developed Debug Mode for testing all features.</li>
-                        <li>Structured the project in modules and wrote Play/Edit Mode automated tests.</li>
-                    </ul>
-                </div>
-            </div>
-			
-			<div class="card mb-4">
-                <div class="card-body">
-                    <img src="./assets/idle-wars-banner.jpg" alt="Idle Wars Banner" class="project-banner">
-                    <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.devjim.idle.wars&hl=en_CA" target="_blank">Idle Wars: Defend the Galaxy - Android (Unity)</a></h4>
-                    <p>Idle game developed in Unity for Android with an auto-shooting mechanic. Players upgrade their weapons to defeat waves of enemies. I worked for 1 month on this project in my free time.</p>
-                    <ul>
-                        <li>Implemented GDPR compliance using Google UMP.</li>
-                        <li>Implemented monetization via Adaptive Banner and Rewarded Video using AdMob.</li>
-                    </ul>
-                </div>
+                <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
 
         <section>
             <h2 class="section-title"><i class="bi bi-mortarboard"></i> Education</h2>
-            <p><strong>Advanced Diploma, Game Programming</strong> (Sep 2022 - Apr 2025)<br><i>Centennial College, Canada - Cumulative GPA: 4.321 of 4.5</i></p>
+            <p><strong>Advanced Diploma, Game Programming</strong> (Sep 2022 - Apr 2025)<br><i>Centennial College, Canada - Cumulative GPA: 4.321 of 4.5 (96%)</i></p>
             <p><strong>Bachelor's degree, Computer Engineering</strong> (Jun 2010 - Dec 2015, Incomplete)<br><i>Infnet Institute, Brazil</i></p>
             <p><strong>Certificate, 3D Character Designer</strong> (Nov 2012 - Feb 2013)<br><i>Infnet Institute, Brazil</i></p>
             <p><strong>Air Force Cadets Preparatory School - Brazilian Air Force</strong> (Jan 2007 - Aug 2009)<br><i>Military Student, High School & Fundamentals of Military Aviation</i></p>
@@ -561,10 +592,25 @@
         </section>
     </div>
 
-    <div class="footer text-center">
-        <p>&copy; 2025 Carlos Gama</p>
-    </div>
-
+    <script>
+        // Adjust the carousel height dynamically based on the active item's content
+        const carousel = document.querySelector('#projectsCarousel');
+        const carouselInner = carousel.querySelector('.carousel-inner');
+    
+        function adjustCarouselHeight() {
+            const activeItem = carousel.querySelector('.carousel-item.active');
+            if (activeItem) {
+                const activeHeight = activeItem.offsetHeight;
+                carouselInner.style.height = `${activeHeight}px`;
+            }
+        }
+    
+        // Adjust height on carousel slide event
+        carousel.addEventListener('slid.bs.carousel', adjustCarouselHeight);
+    
+        // Initial adjustment on page load
+        window.addEventListener('load', adjustCarouselHeight);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
