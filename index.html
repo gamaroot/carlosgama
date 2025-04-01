@@ -4,392 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Gama - Software Engineer</title>
-	<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FFFFFF' viewBox='0 0 16 16'><path d='M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5'/><path d='M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM1 3a1 1 0 0 1 1-1h2v2H1zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3zm-4-2h3v2H2a1 1 0 0 1-1-1zm3-1H1V8h3zm0-3H1V5h3z'/></svg>" type="image/svg+xml">
+    <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FFFFFF' viewBox='0 0 16 16'><path d='M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5'/><path d='M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zM1 3a1 1 0 0 1 1-1h2v2H1zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3zm-4-2h3v2H2a1 1 0 0 1-1-1zm3-1H1V8h3zm0-3H1V5h3z'/></svg>" type="image/svg+xml">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #1a1a1a;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --text-color: #e0e0e0;
-            --text-muted: #a0a0a0;
-            --card-bg: #2d2d2d;
-            --light-bg: #1a1a1a;
-            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            --transition-speed: 0.3s;
-            --max-width: 50vw;
-            --section-spacing: 4rem;
-        }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            color: var(--text-color);
-            background-color: var(--light-bg);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .header {
-            color: white;
-            padding: 3rem 0;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container {
-            max-width: var(--max-width);
-            width: 100%;
-            padding: 0 2rem;
-        }
-
-        .header h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            letter-spacing: -0.5px;
-        }
-
-        .header p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        section {
-            margin-bottom: var(--section-spacing);
-            position: relative;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin: 0 0 2rem;
-            color: var(--text-color);
-            position: relative;
-            padding-bottom: 0.75rem;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--secondary-color), transparent);
-            border-radius: 2px;
-        }
-
-        .section-title i {
-            margin-right: 0.75rem;
-            color: var(--secondary-color);
-            font-size: 1.8rem;
-        }
-
-        .card {
-            border: none;
-            border-radius: 12px;
-            box-shadow: var(--card-shadow);
-            transition: all var(--transition-speed);
-            overflow: hidden;
-            background-color: var(--card-bg);
-            position: relative;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
-            opacity: 0;
-            transition: opacity var(--transition-speed);
-        }
-
-        .card:hover::before {
-            opacity: 1;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .card-body {
-            padding: 2rem;
-        }
-
-        .card-title {
-            color: var(--text-color);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .date-text {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: normal;
-        }
-
-        .card-text {
-            color: var(--text-color);
-            margin-bottom: 1rem;
-        }
-
-        .company-text {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            font-weight: normal;
-        }
-        
-        .project-banner {
-            width: 100%;
-            height: 256px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: height 0.3s ease, box-shadow 0.3s ease;
-            transform-origin: center;
-        }
-
-        .contact-info a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            transition: color var(--transition-speed);
-        }
-
-        .contact-info a:hover {
-            color: var(--accent-color);
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        .portfolio-link {
-            color: var(--secondary-color);
-            text-decoration: none;
-            transition: color var(--transition-speed);
-        }
-
-        .portfolio-link:hover {
-            color: var(--accent-color);
-        }
-
-        a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            transition: all var(--transition-speed);
-            position: relative;
-        }
-
-        a:hover {
-            color: var(--accent-color);
-        }
-
-        a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: var(--secondary-color);
-            transform: scaleX(0);
-            transition: transform var(--transition-speed);
-        }
-
-        a:hover::after {
-            transform: scaleX(1);
-        }
-
-        i {
-            color: var(--text-muted);
-        }
-
-        .contact-card {
-            background: linear-gradient(145deg, var(--card-bg), #363636);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all var(--transition-speed);
-            height: 100%;
-            cursor: pointer;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            border-color: var(--secondary-color);
-        }
-
-        .contact-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-            transition: transform var(--transition-speed);
-        }
-
-        .contact-card:hover .contact-icon {
-            transform: scale(1.1);
-        }
-
-        .contact-text {
-            font-size: 1.1rem;
-            color: var(--text-color);
-            transition: color var(--transition-speed);
-        }
-
-        .contact-card:hover .contact-text {
-            color: var(--secondary-color);
-        }
-
-        #projectsCarousel .carousel-inner {
-            transition: height 0.3s ease;
-        }
-
-        .carousel-item {
-            transform: none !important;
-        }
-
-        .carousel-item {
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .carousel-item.active {
-            opacity: 1;
-        }
-
-        .custom-carousel-control {
-            width: 50px;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-
-        .carousel-control-prev.custom-carousel-control {
-            left: -60px;
-        }
-
-        .carousel-control-next.custom-carousel-control {
-            right: -60px;
-        }
-
-        .custom-carousel-control:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .header {
-                padding: 2rem 0;
-                margin-bottom: 2rem;
-            }
-
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .header p {
-                font-size: 1rem;
-            }
-
-            .container {
-                max-width: 90vw; /* Reduce the maximum width for tablets and smaller devices */
-                padding: 0 1rem; /* Reduce side padding */
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .card-body {
-                padding: 1rem;
-            }
-
-            .project-banner {
-                height: 200px;
-            }
-
-            .contact-icon {
-                font-size: 2.5rem;
-            }
-
-            .contact-text {
-                font-size: 0.9rem;
-            }
-
-            .carousel-control-prev.custom-carousel-control,
-            .carousel-control-next.custom-carousel-control {
-                width: 40px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .header h1 {
-                font-size: 1.75rem;
-            }
-
-            .header p {
-                font-size: 0.9rem;
-            }
-
-            .container {
-                max-width: 95vw; /* Further reduce the maximum width for smaller screens */
-                padding: 0 0.5rem; /* Minimize side padding */
-            }
-
-            .section-title {
-                font-size: 1.25rem;
-            }
-
-            .card-title {
-                font-size: 1.25rem;
-            }
-
-            .project-banner {
-                height: 150px;
-            }
-
-            .contact-icon {
-                font-size: 2rem;
-            }
-
-            .contact-text {
-                font-size: 0.8rem;
-            }
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-
-    <div class="header text-center">
+    <header class="header text-center">
         <h1>Carlos Gama</h1>
         <p>Software Engineer<br>Mobile Game & App Development</p>
-    </div>
+    </header>
 
-    <div class="container">
+    <main class="container">
         <section>
             <h2 class="section-title"><i class="bi bi-person-circle"></i> Contact Information</h2>
             <div class="row g-4">
@@ -397,7 +23,7 @@
                     <div class="card contact-card">
                         <div class="card-body d-flex flex-column align-items-center text-center p-2 mt-1">
                             <i class="bi bi-geo-alt-fill contact-icon"></i>
-                            <a class="contact-text text-decoration-none" href="https://www.google.com/maps/search/?api=1&query=Toronto+ON+M2K+0C4" target="_blank">Toronto, ON - M2K 0C4</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Toronto+ON+M2K+0C4" target="_blank">Toronto, ON - M2K 0C4</a>
                         </div>
                     </div>
                 </div>
@@ -405,7 +31,7 @@
                     <div class="card contact-card">
                         <div class="card-body d-flex flex-column align-items-center text-center p-2 mt-1">
                             <i class="bi bi-linkedin contact-icon"></i>
-                            <a href="https://linkedin.com/in/carlosgama0057" target="_blank" class="contact-text text-decoration-none">linkedin.com/in/carlosgama0057</a>
+                            <a href="https://linkedin.com/in/carlosgama0057" target="_blank">linkedin.com/in/carlosgama0057</a>
                         </div>
                     </div>
                 </div>
@@ -413,7 +39,7 @@
                     <div class="card contact-card">
                         <div class="card-body d-flex flex-column align-items-center text-center p-2 mt-1">
                             <i class="bi bi-envelope-fill contact-icon"></i>
-                            <a href="mailto:gamaroot@gmail.com" class="contact-text text-decoration-none">gamaroot@gmail.com</a>
+                            <a href="mailto:gamaroot@gmail.com">gamaroot@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -427,206 +53,203 @@
 
         <section>
             <h2 class="section-title"><i class="bi bi-gear"></i> Professional Experience</h2>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h4 class="card-title">Lead Software Engineer <span class="date-text">(Jan 2022 - Present)</span></h4>
-                    <p class="company-text">Gazeus Games, Montreal - Canada</p>
-                    <ul>
-                        <li>Led a team of Android and iOS specialists in game tool optimization.</li>
-                        <li>Mentored a remote team and collaborated with cross-functional teams.</li>
-                        <li>Managed roadmap planning and established communication with international partners.</li>
-                    </ul>
+            <div id="professionalExperienceCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Lead Software Engineer <span class="date-text">(Jan 2022 - Present)</span></h4>
+                                <p class="company-text">Gazeus Games, Montreal - Canada</p>
+                                <ul>
+                                    <li>Led a team of Android and iOS specialists in game tool optimization.</li>
+                                    <li>Mentored a remote team and collaborated with cross-functional teams.</li>
+                                    <li>Managed roadmap planning and established communication with international partners.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Mobile Game Developer <span class="date-text">(Sep 2015 - Dec 2021)</span></h4>
+                                <p class="company-text">Gazeus Games, Rio de Janeiro - Brazil</p>
+                                <ul>
+                                    <li>Worked on the most popular classic card game in Brazil, Buraco Jogatina, and other mobile games using Unity, Lua, AndEngine, Android Java/Kotlin, Objective-C.</li>
+                                    <li>Developed the AutoBuilder tool (JavaFX + Bash Shell Scripting) for automating app builds.</li>
+                                    <li>Managed core gameplay, multiplayer systems, ads, and analytics integration using Unity and SmartFox Server.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Mobile Game Developer - Partner <span class="date-text">(Nov 2018 - Jan 2020)</span></h4>
+                                <p class="company-text">CarnaBlocos, Rio de Janeiro - Brazil</p>
+                                <ul>
+                                    <li>Developed and monetized a 2D Infinite Runner game for Android/iOS using Unity.</li>
+                                    <li>Integrated GameSparks for login and global ranking features.</li>
+                                    <li>Monetized using Google AdMob, IronSource, and InGame custom ads.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">System Developer <span class="date-text">(Mar 2015 – May 2015)</span></h4>
+                                <p class="company-text">Brazilian Navy, Rio de Janeiro - Brazil</p>
+                                <ul>
+                                    <li>Developed ESB software using Java-based tools like Karaf and ServiceMix.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Mobile Game Developer <span class="date-text">(Aug 2012 – Nov 2013)</span></h4>
+                                <p class="company-text">Oktagon Games, Rio de Janeiro - Brazil</p>
+                                <ul>
+                                    <li>Developed a game similar to Clash of Clans and a unique match-3 game.</li>
+                                    <li>Worked on a chat system using SmartFox and fixed legacy bugs.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Android Developer <span class="date-text">(Jan 2012 – Aug 2012)</span></h4>
+                                <p class="company-text">True Systems, Rio de Janeiro - Brazil</p>
+                                <ul>
+                                    <li>Migrated a Windows Phone app to Android, including UI redesign and performance optimization.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Android Developer Intern <span class="date-text">(Apr 2011 – Jan 2012)</span></h4>
+                                <p class="company-text">Declink, Rio de Janeiro - Brazil</p>
+                                <ul>
+                                    <li>Worked on the migration of Rio de Janeiro's Traffic Infractions Management System from Palm OS to Android.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">System Analyst Intern <span class="date-text">(Oct 2010 – Apr 2011)</span></h4>
+                                <p class="company-text">Stefanini LATAM, Rio de Janeiro - Brazil</p>
+                                <ul>
+                                    <li>Developed functional prototypes for desktop apps using .NET C#.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h4 class="card-title">Mobile Game Developer <span class="date-text">(Sep 2015 - Dec 2021)</span></h4>
-                    <p class="company-text">Gazeus Games, Rio de Janeiro - Brazil</p>
-                    <ul>
-                        <li>Worked on the most popular classic card game in Brazil, Buraco Jogatina, and other mobile games using Unity, Lua, AndEngine, Android Java/Kotlin, Objective-C.</li>
-                        <li>Developed the AutoBuilder tool (JavaFX + Bash Shell Scripting) for automating app builds.</li>
-                        <li>Managed core gameplay, multiplayer systems, ads, and analytics integration using Unity and SmartFox Server.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h4 class="card-title">Mobile Game Developer - Partner <span class="date-text">(Nov 2018 - Jan 2020)</span></h4>
-                    <p class="company-text">CarnaBlocos, Rio de Janeiro - Brazil</p>
-                    <ul>
-                        <li>Developed and monetized a 2D Infinite Runner game for Android/iOS using Unity.</li>
-                        <li>Integrated GameSparks for login and global ranking features.</li>
-                        <li>Monetized using Google AdMob, IronSource, and InGame custom ads.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h4 class="card-title">System Developer <span class="date-text">(Mar 2015 – May 2015)</span></h4>
-                    <p class="company-text">Brazilian Navy, Rio de Janeiro - Brazil</p>
-                    <ul>
-                        <li>Developed ESB software using Java-based tools like Karaf and ServiceMix.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h4 class="card-title">Mobile Game Developer <span class="date-text">(Aug 2012 – Nov 2013)</span></h4>
-                    <p class="company-text">Oktagon Games, Rio de Janeiro - Brazil</p>
-                    <ul>
-                        <li>Developed a game similar to Clash of Clans and a unique match-3 game.</li>
-                        <li>Worked on a chat system using SmartFox and fixed legacy bugs.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h4 class="card-title">Android Developer <span class="date-text">(Jan 2012 – Aug 2012)</span></h4>
-                    <p class="company-text">True Systems, Rio de Janeiro - Brazil</p>
-                    <ul>
-                        <li>Migrated a Windows Phone app to Android, including UI redesign and performance optimization.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h4 class="card-title">Android Developer Intern <span class="date-text">(Apr 2011 – Jan 2012)</span></h4>
-                    <p class="company-text">Declink, Rio de Janeiro - Brazil</p>
-                    <ul>
-                        <li>Worked on the migration of Rio de Janeiro's Traffic Infractions Management System from Palm OS to Android.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h4 class="card-title">System Analyst Intern <span class="date-text">(Oct 2010 – Apr 2011)</span></h4>
-                    <p class="company-text">Stefanini LATAM, Rio de Janeiro - Brazil</p>
-                    <ul>
-                        <li>Developed functional prototypes for desktop apps using .NET C#.</li>
-                    </ul>
-                </div>
+                <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#professionalExperienceCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#professionalExperienceCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
 
         <section>
             <h2 class="section-title"><i class="bi bi-controller"></i> Projects</h2>
-
-            <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="projectsCarousel" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="card-body">
-                            <img src="./assets/buraco-banner.jpg" alt="Buraco Jogatina" class="project-banner">
-                            <h4 class="card-title"><a href="https://apps.jogatina.com/en/buraco/" target="_blank">Buraco Jogatina - Android/iOS (Unity)</a></h4>
-                            <p>Implemented the game and migrated it from AndEngine to Unity:</p>
-                            <ul>
-                                <li>Worked on single/multiplayer core gameplay and bots using Lua.</li>
-                                <li>Integrated multiplayer using SmartFox.</li>
-                                <li>Integrated Chat & Emoji features with animations created through Spine.</li>
-                                <li>Integrated Ads, Analytics, Push, Local Notifications, and Debug Mode tools.</li>
-                            </ul>
-                        </div>
+                        <img src="./assets/buraco-banner.jpg" alt="Buraco Jogatina" class="project-banner">
+                        <h4 class="card-title"><a href="https://apps.jogatina.com/en/buraco/" target="_blank">Buraco Jogatina - Android/iOS (Unity)</a></h4>
+                        <p>Implemented the game and migrated it from AndEngine to Unity:</p>
+                        <ul>
+                            <li>Worked on single/multiplayer core gameplay and bots using Lua.</li>
+                            <li>Integrated multiplayer using SmartFox.</li>
+                            <li>Integrated Chat & Emoji features with animations created through Spine.</li>
+                            <li>Integrated Ads, Analytics, Push, Local Notifications, and Debug Mode tools.</li>
+                        </ul>
                     </div>
                     <div class="carousel-item">
-                        <div class="card-body">
-                            <img src="./assets/dominoes-battle-banner.jpg" alt="Dominoes Battle" class="project-banner">
-                            <h4 class="card-title"><a href="https://apps.jogatina.com/en/dominoes-battle/" target="_blank">Dominoes Battle - Android/iOS (PixJS + Native Bridge)</a></h4>
-                            <p>Implemented Android and iOS native solutions, such as internal and 3rd party tools integrations, deep linking and solved Apple privacy compliances.</p>
-                        </div>
+                        <img src="./assets/dominoes-battle-banner.jpg" alt="Dominoes Battle" class="project-banner">
+                        <h4 class="card-title"><a href="https://apps.jogatina.com/en/dominoes-battle/" target="_blank">Dominoes Battle - Android/iOS (PixJS + Native Bridge)</a></h4>
+                        <p>Implemented Android and iOS native solutions, such as internal and 3rd party tools integrations, deep linking and solved Apple privacy compliances.</p>
                     </div>
                     <div class="carousel-item">
-                        <div class="card-body">
-                            <img src="./assets/dominoes-banner.jpg" alt="Dominoes Jogatina" class="project-banner">
-                            <h4 class="card-title"><a href="https://apps.jogatina.com/en/dominoes/" target="_blank">Dominoes Jogatina - Android/iOS (Unity)</a></h4>
-                            <p>Worked on implementing seasonal promotions, ads, and analytics.</p>
-                        </div>
+                        <img src="./assets/dominoes-banner.jpg" alt="Dominoes Jogatina" class="project-banner">
+                        <h4 class="card-title"><a href="https://apps.jogatina.com/en/dominoes/" target="_blank">Dominoes Jogatina - Android/iOS (Unity)</a></h4>
+                        <p>Worked on implementing seasonal promotions, ads, and analytics.</p>
                     </div>
                     <div class="carousel-item">
-                        <div class="card-body">
-                            <img src="./assets/blackjack-banner.jpg" alt="Blackjack Jogatina" class="project-banner">
-                            <h4 class="card-title"><a href="https://apps.jogatina.com/en/blackjack/" target="_blank">Blackjack Jogatina - Android/iOS (Unity)</a></h4>
-                            <p>Implemented daily missions/rewards, integrated ads, analytics and push notification.</p>
-                        </div>
+                        <img src="./assets/blackjack-banner.jpg" alt="Blackjack Jogatina" class="project-banner">
+                        <h4 class="card-title"><a href="https://apps.jogatina.com/en/blackjack/" target="_blank">Blackjack Jogatina - Android/iOS (Unity)</a></h4>
+                        <p>Implemented daily missions/rewards, integrated ads, analytics and push notification.</p>
                     </div>
                     <div class="carousel-item">
-                        <div class="card-body">
-                            <img src="./assets/solitaire_town-banner.jpg" alt="Solitaire Town" class="project-banner">
-                            <h4 class="card-title"><a href="https://apps.jogatina.com/en/solitaire-town/" target="_blank">Solitaire Town - Android/iOS (Unity)</a></h4>
-                            <p>Implemented the game, integrated ads, analytics and push notification.</p>
-                        </div>
+                        <img src="./assets/solitaire_town-banner.jpg" alt="Solitaire Town" class="project-banner">
+                        <h4 class="card-title"><a href="https://apps.jogatina.com/en/solitaire-town/" target="_blank">Solitaire Town - Android/iOS (Unity)</a></h4>
+                        <p>Implemented the game, integrated ads, analytics and push notification.</p>
                     </div>
                     <div class="carousel-item">
-                        <div class="card-body">
-                            <img src="./assets/autobuilder-banner.jpg" alt="Auto Builder" class="project-banner">
-                            <h4 class="card-title"><a href="#" target="_blank">AutoBuilder - Windows/MacOS (Java FX / Bash Scripting)</a></h4>
-                            <p>Developed a tool that generates Android/iOS apps from a JavaScript game project:</p>
-                            <ul>
-                                <li>Provides both local and CI build pipelines.</li>
-                                <li>Displays the log from connected device.</li>
-                                <li>Integrated Firebase App Distribution.</li>
-                                <li>Automatically generates release notes (commits + dependencies).</li>
-                            </ul>
-                        </div>
+                        <img src="./assets/autobuilder-banner.jpg" alt="Auto Builder" class="project-banner">
+                        <h4 class="card-title"><a href="#" target="_blank">AutoBuilder - Windows/MacOS (Java FX / Bash Scripting)</a></h4>
+                        <p>Developed a tool that generates Android/iOS apps from a JavaScript game project:</p>
+                        <ul>
+                            <li>Provides both local and CI build pipelines.</li>
+                            <li>Displays the log from connected device.</li>
+                            <li>Integrated Firebase App Distribution.</li>
+                            <li>Automatically generates release notes (commits + dependencies).</li>
+                        </ul>
                     </div>
                     <div class="carousel-item">
-                        <div class="card-body">
-                            <img src="./assets/armies-and-ants-banner.jpg" alt="Armies & Ants" class="project-banner">
-                            <h4 class="card-title"><a href="https://www.youtube.com/watch?v=MyXdo-RD3-I" target="_blank">Armies & Ants - Android/iOS (Unity)</a></h4>
-                            <p>Worked on a chat system using SmartFox.</p>
-                        </div>
+                        <img src="./assets/armies-and-ants-banner.jpg" alt="Armies & Ants" class="project-banner">
+                        <h4 class="card-title"><a href="https://www.youtube.com/watch?v=MyXdo-RD3-I" target="_blank">Armies & Ants - Android/iOS (Unity)</a></h4>
+                        <p>Worked on a chat system using SmartFox.</p>
                     </div>
                     <div class="carousel-item">
-                        <div class="card-body">
-                            <img src="./assets/viral-collapse-banner.jpg" alt="Viral College" class="project-banner">
-                            <h4 class="card-title"><a href="https://www.youtube.com/watch?v=5VC7qEIUKDE" target="_blank">Viral Collapse - Android/iOS (NgCore - JavaScript)</a></h4>
-                            <p>Developed some powerups, daily bonus with a spin machine and fixed legacy bugs.</p>
-                        </div>
+                        <img src="./assets/viral-collapse-banner.jpg" alt="Viral College" class="project-banner">
+                        <h4 class="card-title"><a href="https://www.youtube.com/watch?v=5VC7qEIUKDE" target="_blank">Viral Collapse - Android/iOS (NgCore - JavaScript)</a></h4>
+                        <p>Developed some powerups, daily bonus with a spin machine and fixed legacy bugs.</p>
                     </div>
                     <div class="carousel-item">
-                        <div class="card-body">
-                            <img src="./assets/carnablocos-run-banner.jpg" alt="CarnaBlocos Run" class="project-banner">
-                            <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.carnablocos" target="_blank">CarnaBlocos - Android/iOS (Unity)</a></h4>
-                            <p>Developed and monetized a 2D Infinite Runner game. Implemented GameSparks for login and global rankings and integrated multiple ad networks for monetization.</p>
-                        </div>
+                        <img src="./assets/carnablocos-run-banner.jpg" alt="CarnaBlocos Run" class="project-banner">
+                        <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.carnablocos" target="_blank">CarnaBlocos - Android/iOS (Unity)</a></h4>
+                        <p>Developed and monetized a 2D Infinite Runner game. Implemented GameSparks for login and global rankings and integrated multiple ad networks for monetization.</p>
                     </div>
                     <div class="carousel-item">
-                        <div class="card-body">
-                            <img src="./assets/pixel-brawl-banner.jpg" alt="Pixel Brawl" class="project-banner">
-                            <h4 class="card-title"><a href="https://carlosgama.itch.io/pixel-brawl" target="_blank">Pixel Brawl - Windows (Unity)</a></h4>
-                            <p class="card-text"><strong>Presentation Slides:</strong> <a href="https://docs.google.com/presentation/d/1C03R1gT_Jifr8liHOEu1Q50PDrE5WtAtbg-Ee_v6fQw/edit#slide=id.g2d6ad56c6bd_0_452" target="_blank">Google Slides</a></p>
-                            <p><strong>Demo:</strong> <a href="https://youtu.be/17__qGoin3c" target="_blank">YouTube Video</a></p>
-                            <p>Academic project for my Game Programming course at Centennial College. A roguelite shooter inspired by classics like The Binding of Isaac and Enter the Gungeon. Players battle enemies in randomly generated rooms. I worked for 3 months on this game for PC using Unity.</p>
-                            <ul>
-                                <li>Implemented player controller using new Unity's Input System with Gamepad and Keyboard/Mouse support.</li>
-                                <li>Implemented Gamepad and Keyboard/Mouse UI Navigation support.</li>
-                                <li>Implemented procedural map generation.</li>
-                                <li>Used Unity Internationalization System for 7 languages.</li>
-                                <li>Designed AI using Unity's Behavior System.</li>
-                                <li>Used Shader Graph for health feedback.</li>
-                                <li>Implemented mechanics such as move, shoot, parry and dash with invincibility frames</li>
-                                <li>Developed Debug Mode for testing all features.</li>
-                                <li>Structured the project in modules using Assembly Definition.</li>
-                                <li>Wrote Play/Edit Mode automated tests.</li>
-                            </ul>
-                        </div>
+                        <img src="./assets/pixel-brawl-banner.jpg" alt="Pixel Brawl" class="project-banner">
+                        <h4 class="card-title"><a href="https://carlosgama.itch.io/pixel-brawl" target="_blank">Pixel Brawl - Windows (Unity)</a></h4>
+                        <p class="card-text"><strong>Presentation Slides:</strong> <a href="https://docs.google.com/presentation/d/1C03R1gT_Jifr8liHOEu1Q50PDrE5WtAtbg-Ee_v6fQw/edit#slide=id.g2d6ad56c6bd_0_452" target="_blank">Google Slides</a></p>
+                        <p><strong>Demo:</strong> <a href="https://youtu.be/17__qGoin3c" target="_blank">YouTube Video</a></p>
+                        <p>Academic project for my Game Programming course at Centennial College. A roguelite shooter inspired by classics like The Binding of Isaac and Enter the Gungeon. Players battle enemies in randomly generated rooms. I worked for 3 months on this game for PC using Unity.</p>
+                        <ul>
+                            <li>Implemented player controller using new Unity's Input System with Gamepad and Keyboard/Mouse support.</li>
+                            <li>Implemented Gamepad and Keyboard/Mouse UI Navigation support.</li>
+                            <li>Implemented procedural map generation.</li>
+                            <li>Used Unity Internationalization System for 7 languages.</li>
+                            <li>Designed AI using Unity's Behavior System.</li>
+                            <li>Used Shader Graph for health feedback.</li>
+                            <li>Implemented mechanics such as move, shoot, parry and dash with invincibility frames</li>
+                            <li>Developed Debug Mode for testing all features.</li>
+                            <li>Structured the project in modules using Assembly Definition.</li>
+                            <li>Wrote Play/Edit Mode automated tests.</li>
+                        </ul>
                     </div>
                     <div class="carousel-item">
-                        <div class="card-body">
-                            <img src="./assets/idle-wars-banner.jpg" alt="Idle Wars" class="project-banner">
-                            <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.devjim.idle.wars&hl=en_CA" target="_blank">Idle Wars: Defend the Galaxy - Android (Unity)</a></h4>
-                            <p>Academic project for my Game Programming course at Centennial College. Idle game with an auto-shooting mechanic, where players upgrade their weapons to defeat waves of enemies.</p>
-                            <ul>
-                                <li>Implemented GDPR compliance using Google UMP.</li>
-                                <li>Implemented monetization via Adaptive Banner and Rewarded Video using AdMob.</li>
-                            </ul>
-                        </div>
+                        <img src="./assets/idle-wars-banner.jpg" alt="Idle Wars" class="project-banner">
+                        <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.devjim.idle.wars&hl=en_CA" target="_blank">Idle Wars: Defend the Galaxy - Android (Unity)</a></h4>
+                        <p>Academic project for my Game Programming course at Centennial College. Idle game with an auto-shooting mechanic, where players upgrade their weapons to defeat waves of enemies.</p>
+                        <ul>
+                            <li>Implemented GDPR compliance using Google UMP.</li>
+                            <li>Implemented monetization via Adaptive Banner and Rewarded Video using AdMob.</li>
+                        </ul>
                     </div>
                 </div>
                 <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
@@ -653,27 +276,9 @@
             <p><strong>Member, Program Advisory Committee</strong> (Nov 2024 - Present)<br><i>Centennial College, Canada</i><br><div>Collaborated with the college to provide industry trends, advise on curriculum relevance, identify changes in skill and knowledge requirements, and ensure the curriculum aligns with industry needs <i>(Reference: <a href="https://www.centennialcollege.ca/about-centennial/centres-and-institutes/teaching-excellence-and-academic-quality/academic-quality-assurance/program-advisory-committee">link</a>)</i>.</div></p>
             <p><strong>Brazilian Air Force</strong> (Sep 2008)<br><i>Carandaí, Minas Gerais, Brazil</i><br><div>Humanitarian aid to the homeless in a disaster <i>(S.O.S. Carandaí - <a href="https://www-fab-mil-br.translate.goog/noticias/imprime/1444/EPCAR%20presta%20socorro%20%C3%A0s%20v%C3%ADtimas%20da%20chuva%20de%20granizo%20no%20interior%20de%20MG?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp">link</a>)</i>.</div></p>
         </section>
-    </div>
+    </main>
 
-    <script>
-        // Adjust the carousel height dynamically based on the active item's content
-        const carousel = document.querySelector('#projectsCarousel');
-        const carouselInner = carousel.querySelector('.carousel-inner');
-    
-        function adjustCarouselHeight() {
-            const activeItem = carousel.querySelector('.carousel-item.active');
-            if (activeItem) {
-                const activeHeight = activeItem.offsetHeight;
-                carouselInner.style.height = `${activeHeight}px`;
-            }
-        }
-    
-        // Adjust height on carousel slide event
-        carousel.addEventListener('slid.bs.carousel', adjustCarouselHeight);
-    
-        // Initial adjustment on page load
-        window.addEventListener('load', adjustCarouselHeight);
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
