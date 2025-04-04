@@ -264,7 +264,12 @@ i {
     transform: scale(1.1);
 }
 
-#projectsCarousel .carousel-inner {
+#gamesCarousel .carousel-inner {
+    transition: height 0.3s ease;
+    will-change: transform;
+}
+
+#toolsCarousel .carousel-inner {
     transition: height 0.3s ease;
     will-change: transform;
 }

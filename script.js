@@ -2,43 +2,34 @@
 function handleHeaderScroll() {
     const header = document.querySelector('.header');
     const main = document.querySelector('main');
+    const scrolled = window.scrollY > 50;
     
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-        main.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-        main.classList.remove('scrolled');
-    }
+    header.classList.toggle('scrolled', scrolled);
+    main.classList.toggle('scrolled', scrolled);
 }
 
 // Carousel height adjustment
 function adjustCarouselHeight(carouselId) {
     const carousel = document.querySelector(`#${carouselId}`);
-    const carouselInner = carousel.querySelector('.carousel-inner');
-    const activeItem = carousel.querySelector('.carousel-item.active');
+    const activeItem = carousel?.querySelector('.carousel-item.active');
     
     if (activeItem) {
-        const activeHeight = activeItem.offsetHeight;
-        carouselInner.style.height = `${activeHeight}px`;
+        carousel.querySelector('.carousel-inner').style.height = `${activeItem.offsetHeight}px`;
     }
 }
 
 // Initialize everything when the DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     // Header scroll effect
     window.addEventListener('scroll', handleHeaderScroll);
     handleHeaderScroll(); // Initial check
     
-    const projectsCarousel = document.querySelector('#projectsCarousel');
-    if (projectsCarousel) {
-        projectsCarousel.addEventListener('slid.bs.carousel', () => adjustCarouselHeight('projectsCarousel'));
-        window.addEventListener('load', () => adjustCarouselHeight('projectsCarousel'));
-    }
-    
-    const professionalExperienceCarousel = document.querySelector('#professionalExperienceCarousel');
-    if (professionalExperienceCarousel) {
-        professionalExperienceCarousel.addEventListener('slid.bs.carousel', () => adjustCarouselHeight('professionalExperienceCarousel'));
-        window.addEventListener('load', () => adjustCarouselHeight('professionalExperienceCarousel'));
-    }
+    // Initialize carousels
+    ['gamesCarousel', 'toolsCarousel', 'professionalExperienceCarousel'].forEach(id => {
+        const carousel = document.querySelector(`#${id}`);
+        if (carousel) {
+            carousel.addEventListener('slid.bs.carousel', () => adjustCarouselHeight(id));
+            window.addEventListener('load', () => adjustCarouselHeight(id));
+        }
+    });
 }); 
