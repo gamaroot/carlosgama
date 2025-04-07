@@ -296,7 +296,7 @@ i {
 .custom-carousel-control {
     width: 50px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -304,21 +304,34 @@ i {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    transition: none;
-    will-change: transform, background-color;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    will-change: transform, background-color, opacity;
     -webkit-tap-highlight-color: transparent;
+    opacity: 0.4;
 }
 
 .carousel-control-prev.custom-carousel-control {
     left: -60px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .carousel-control-next.custom-carousel-control {
     right: -60px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .custom-carousel-control:hover {
     background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}
+
+#gamesCarousel:hover .custom-carousel-control,
+#toolsCarousel:hover .custom-carousel-control,
+#professionalExperienceCarousel:hover .custom-carousel-control {
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
 }
 
 @media (max-width: 768px) {
