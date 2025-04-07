@@ -184,6 +184,10 @@ section {
     transform-origin: center;
 }
 
+img[src="./assets/small-games-banner.jpg"] {
+    object-fit: contain;
+}
+
 .contact-info a {
     color: var(--secondary-color);
     text-decoration: none;
