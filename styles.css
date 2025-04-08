@@ -466,43 +466,67 @@ i {
 @media (max-width: 576px) {
     .header {
         padding: 1.5rem 0;
+        text-align: center;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .header-content {
-        padding: 0 1rem;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .header-main {
         gap: 1rem;
+        justify-content: center;
+        padding: 0 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .header h1 {
         font-size: 1.75rem;
+        text-align: center;
+        width: 100%;
     }
 
     .profile-picture {
-        width: 80px;
-        height: 80px;
+        display: none;
     }
 
     .contact-section {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-        width: 100%;
-    }
-
-    .contact-item {
-        width: 100%;
+        display: none;
     }
 
     .title-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 0.5rem;
+        width: 100%;
+        text-align: center;
     }
 
     .divider {
         display: none;
+    }
+
+    .profile-info {
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+
+    .name-title {
+        align-items: center;
+        text-align: center;
     }
 } 
