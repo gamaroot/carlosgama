@@ -10,42 +10,40 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header text-center">
-        <h1>Carlos Gama</h1>
-        <p>Software Engineer<br>Mobile Game & App Development</p>
-    </header>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-main">
+                <img src="./assets/profile.jpg" alt="Carlos Gama" class="profile-picture">
+                <div class="profile-info">
+                    <div class="name-title">
+                        <h1>Carlos Gama</h1>
+                        <div class="title-container">
+                            <h2 class="role">Software Engineer</h2>
+                            <span class="divider">•</span>
+                            <h2 class="specialization">Mobile Game & App Development</h2>
+                        </div>
+                    </div>
 
-    <main class="container">
-        <section>
-            <h2 class="section-title"><i class="bi bi-person-circle"></i> Contact Information</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card contact-card">
-                        <div class="card-body d-flex flex-column align-items-center text-center p-2 mt-1">
+                    <div class="contact-section">
+                        <div class="contact-item">
                             <i class="bi bi-geo-alt-fill contact-icon"></i>
-                            <a href="https://www.google.com/maps/search/?api=1&query=Toronto+ON+M2K+0C4" target="_blank">Toronto, ON - M2K 0C4</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Toronto+ON+M2K+0C4" target="_blank" class="contact-link">Toronto, ON - M2K 0C4</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card contact-card">
-                        <div class="card-body d-flex flex-column align-items-center text-center p-2 mt-1">
+                        <div class="contact-item">
                             <i class="bi bi-linkedin contact-icon"></i>
-                            <a href="https://linkedin.com/in/carlosgama0057" target="_blank">linkedin.com/in/carlosgama0057</a>
+                            <a href="https://linkedin.com/in/carlosgama0057" target="_blank" class="contact-link">linkedin.com/in/carlosgama0057</a>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card contact-card">
-                        <div class="card-body d-flex flex-column align-items-center text-center p-2 mt-1">
+                        <div class="contact-item">
                             <i class="bi bi-envelope-fill contact-icon"></i>
-                            <a href="mailto:gamaroot@gmail.com">gamaroot@gmail.com</a>
+                            <a href="mailto:gamaroot@gmail.com" class="contact-link">gamaroot@gmail.com</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
 
+    <main class="container">
         <section>
             <h2 class="section-title"><i class="bi bi-briefcase"></i> Summary of Qualifications</h2>
             <p>Software Developer since 2010, with 5 years of Android development and 11 years in Game development.</p>
@@ -87,7 +85,7 @@
                                 <h4 class="card-title">Mobile Game Developer - Partner <span class="date-text">(Nov 2018 - Jan 2020)</span></h4>
                                 <p class="company-text">CarnaBlocos, Rio de Janeiro - Brazil</p>
                                 <ul>
-                                    <li>Developed and monetized a 2D Infinite Runner game for Android/iOS using Unity.</li>
+                                    <li>Developed a 2D Infinite Runner game for Android/iOS using Unity.</li>
                                     <li>Integrated GameSparks for login and global ranking features.</li>
                                     <li>Monetized using Google AdMob, IronSource, and InGame custom ads.</li>
                                 </ul>
@@ -111,8 +109,7 @@
                                 <h4 class="card-title">Mobile Game Developer <span class="date-text">(Aug 2012 – Nov 2013)</span></h4>
                                 <p class="company-text">Oktagon Games, Rio de Janeiro - Brazil</p>
                                 <ul>
-                                    <li>Developed a game similar to Clash of Clans and a unique match-3 game.</li>
-                                    <li>Worked on a chat system using SmartFox and fixed legacy bugs.</li>
+                                    <li>Worked on an online multiplayer mobile Unity game similar to Clash of Clans and a match-3 game using NgCore Engine with JavaScript.</li>
                                 </ul>
                             </div>
                         </div>
@@ -218,7 +215,7 @@
                         <img src="./assets/carnablocos-run-banner.jpg" alt="CarnaBlocos Run" class="project-banner">
                         <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.carnablocos" target="_blank">CarnaBlocos - Android/iOS (Unity)</a></h4>
                         <p class="company-text">CarnaBlocos, Rio de Janeiro - Brazil</p>
-                        <p>Developed and monetized a 2D Infinite Runner game. Implemented GameSparks for login and global rankings and integrated multiple ad networks for monetization.</p>
+                        <p>Developed a 2D Infinite Runner game using GameSparks for login and global rankings, and integrated multiple ad networks for monetization.</p>
                     </div>
                     <div class="carousel-item">
                         <img src="./assets/pixel-brawl-banner.jpg" alt="Pixel Brawl" class="project-banner">
@@ -234,7 +231,7 @@
                             <li>Used Unity Internationalization System for 7 languages.</li>
                             <li>Designed AI using Unity's Behavior System.</li>
                             <li>Used Shader Graph for health feedback.</li>
-                            <li>Implemented mechanics such as move, shoot, parry and dash with invincibility frames</li>
+                            <li>Implemented mechanics such as move, shoot, parry and dash with invincibility frames.</li>
                             <li>Developed Debug Mode for testing all features.</li>
                             <li>Structured the project in modules using Assembly Definition.</li>
                             <li>Wrote Play/Edit Mode automated tests.</li>

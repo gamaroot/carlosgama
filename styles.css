@@ -24,8 +24,7 @@ body {
 
 .header {
     color: white;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
+    padding: 2.5rem 0rem 1rem 0rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     width: 100%;
     position: fixed;
@@ -37,27 +36,22 @@ body {
     height: auto;
 }
 
-.header.scrolled {
-    padding: 1.5rem 0;
-    margin-bottom: 1.5rem;
+.header-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
-.header.scrolled h1 {
-    font-size: 2.5rem;
-}
-
-.header.scrolled p {
-    font-size: 1rem;
+.header-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
 main {
     margin-top: 15rem;
     transition: margin-top 0.3s ease;
     width: 100%;
-}
-
-main.scrolled {
-    margin-top: 8rem;
 }
 
 .container {
@@ -69,9 +63,10 @@ main.scrolled {
 .header h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.5px;
+    line-height: 0.9;
 }
 
 .header p {
@@ -188,16 +183,6 @@ img[src="./assets/small-games-banner.jpg"] {
     object-fit: contain;
 }
 
-.contact-info a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    transition: color var(--transition-speed);
-}
-
-.contact-info a:hover {
-    color: var(--accent-color);
-}
-
 li {
     margin-bottom: 0.5rem;
 }
@@ -241,31 +226,6 @@ a:hover::after {
 
 i {
     color: var(--text-muted);
-}
-
-.contact-card {
-    background: linear-gradient(145deg, var(--card-bg), #363636);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all var(--transition-speed);
-    height: 100%;
-    cursor: pointer;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    border-color: var(--secondary-color);
-}
-
-.contact-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
-    transition: transform var(--transition-speed);
-}
-
-.contact-card:hover .contact-icon {
-    transform: scale(1.1);
 }
 
 #gamesCarousel .carousel-inner {
@@ -338,6 +298,97 @@ i {
     opacity: 0.8;
 }
 
+.contact-section {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+}
+
+.contact-icon {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.contact-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.contact-item:hover .contact-icon {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.contact-item:hover .contact-link {
+    color: var(--accent-color);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.name-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+}
+
+.role, .specialization {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.divider {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+.profile-picture {
+    width: 130px;
+    height: 130px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.profile-picture:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-color);
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
@@ -346,11 +397,14 @@ i {
 
     .header {
         padding: 2rem 0;
-        margin-bottom: 2rem;
+    }
+
+    .header-main {
+        gap: 1.5rem;
     }
 
     .header h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     .header p {
@@ -374,10 +428,6 @@ i {
         height: 200px;
     }
 
-    .contact-icon {
-        font-size: 2.5rem;
-    }
-
     .carousel-control-prev.custom-carousel-control,
     .carousel-control-next.custom-carousel-control {
         width: 40px;
@@ -395,51 +445,64 @@ i {
         margin-top: 12rem;
     }
 
-    main.scrolled {
-        margin-top: 6rem;
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-section {
+        gap: 1rem;
+    }
+
+    .title-container {
+        gap: 0.75rem;
+    }
+
+    .role, .specialization {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 576px) {
+    .header {
+        padding: 1.5rem 0;
+    }
+
+    .header-content {
+        padding: 0 1rem;
+    }
+
+    .header-main {
+        gap: 1rem;
+    }
+
     .header h1 {
         font-size: 1.75rem;
     }
 
-    .header p {
-        font-size: 0.9rem;
+    .profile-picture {
+        width: 80px;
+        height: 80px;
     }
 
-    .container {
-        max-width: 95vw;
-        padding: 0 0.5rem;
+    .contact-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        width: 100%;
     }
 
-    .section-title {
-        font-size: 1.25rem;
+    .contact-item {
+        width: 100%;
     }
 
-    .card-title {
-        font-size: 1.25rem;
+    .title-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 
-    .project-banner {
-        height: 150px;
-    }
-
-    .contact-icon {
-        font-size: 2rem;
-    }
-
-    .carousel-control-prev.custom-carousel-control,
-    .carousel-control-next.custom-carousel-control {
-        width: 30px;
-    }
-
-    .carousel-control-prev.custom-carousel-control {
-        left: -15px;
-    }
-
-    .carousel-control-next.custom-carousel-control {
-        right: -15px;
+    .divider {
+        display: none;
     }
 } 
