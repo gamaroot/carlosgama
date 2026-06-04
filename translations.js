@@ -127,10 +127,10 @@ const TRANSLATIONS = {
 
     // ── Education ─────────────────────────────────────────────────────────────
     'edu.0.degree': 'Advanced Diploma, Game Programming',
-    'edu.0.detail': 'Centennial College, Canada — Cumulative GPA: 4.352 of 4.5 (96.71%)',
+    'edu.0.detail': 'Centennial College, Canada - Cumulative GPA: 4.352 of 4.5 (96.71%)',
     'edu.1.degree': "Bachelor's degree, Computer Engineering",
     'edu.2.degree': 'Certificate, 3D Character Designer',
-    'edu.3.degree': 'Air Force Cadets Preparatory School — Brazilian Air Force',
+    'edu.3.degree': 'Air Force Cadets Preparatory School - Brazilian Air Force',
     'edu.3.detail': 'Military Student, High School &amp; Fundamentals of Military Aviation',
 
     // ── Volunteer ─────────────────────────────────────────────────────────────
@@ -283,10 +283,10 @@ const TRANSLATIONS = {
 
     // ── Formation ─────────────────────────────────────────────────────────────
     'edu.0.degree': 'Diplôme avancé, Programmation de jeux',
-    'edu.0.detail': 'Collège Centennial, Canada — GPA cumulatif : 4,352 sur 4,5 (96,71 %)',
+    'edu.0.detail': 'Collège Centennial, Canada - GPA cumulatif : 4,352 sur 4,5 (96,71 %)',
     'edu.1.degree': 'Baccalauréat, Génie informatique',
     'edu.2.degree': 'Certificat, Concepteur de personnages 3D',
-    'edu.3.degree': "École Préparatoire des cadets de l’Aéronautique — Force Aérienne Brésilienne",
+    'edu.3.degree': "École Préparatoire des cadets de l’Aéronautique - Force Aérienne Brésilienne",
     'edu.3.detail': "Élève militaire, lycée et fondamentaux de l'aviation militaire",
 
     // ── Bénévolat ─────────────────────────────────────────────────────────────
