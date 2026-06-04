@@ -126,7 +126,7 @@ body {
 /* Main Content Styles */
 main {
     margin-top: 15rem;
-    transition: margin-top 0.3s ease;
+    transition: margin-top 0.3s ease, opacity 0.18s ease;
     width: 100%;
 }
 
@@ -701,6 +701,88 @@ section.visible .section-title::after {
         align-items: center;
         text-align: center;
     }
+}
+
+/* ── Scroll Progress Bar ─────────────────────────────────────────────────── */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    z-index: 9999;
+    border-radius: 0 2px 2px 0;
+    transition: width 0.08s linear;
+    pointer-events: none;
+}
+
+/* ── Profile Picture Ring Pulse ──────────────────────────────────────────── */
+@keyframes ringPulse {
+    0%   { box-shadow: 0 0 0 0   rgba(52, 152, 219, 0.55), 0 4px 8px rgba(0,0,0,0.3); }
+    70%  { box-shadow: 0 0 0 10px rgba(52, 152, 219, 0),   0 4px 8px rgba(0,0,0,0.3); }
+    100% { box-shadow: 0 0 0 0   rgba(52, 152, 219, 0),    0 4px 8px rgba(0,0,0,0.3); }
+}
+
+.profile-picture {
+    animation: ringPulse 3.2s ease-out infinite;
+}
+
+/* ── Section Icon Pop ────────────────────────────────────────────────────── */
+@keyframes iconPop {
+    0%   { transform: scale(0.3) rotate(-20deg); opacity: 0; }
+    60%  { transform: scale(1.2) rotate(6deg);   opacity: 1; }
+    80%  { transform: scale(0.93) rotate(-2deg); }
+    100% { transform: scale(1) rotate(0deg);     opacity: 1; }
+}
+
+.section-title i {
+    display: inline-block;
+    opacity: 0;
+}
+
+section.visible .section-title i {
+    animation: iconPop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    animation-delay: 0.05s;
+}
+
+/* ── Staggered List Items ────────────────────────────────────────────────── */
+section li {
+    opacity: 0;
+    transform: translateX(-12px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+section.visible li {
+    opacity: 1;
+    transform: none;
+}
+
+/* ── Banner Zoom ─────────────────────────────────────────────────────────── */
+.banner-wrapper {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner-wrapper .project-banner {
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    display: block;
+    transition: transform 0.55s ease;
+}
+
+.banner-wrapper:hover .project-banner {
+    transform: scale(1.05);
+}
+
+/* ── Language Switch Fade ────────────────────────────────────────────────── */
+main.lang-switching {
+    opacity: 0;
+    pointer-events: none;
 }
 
 @media print {

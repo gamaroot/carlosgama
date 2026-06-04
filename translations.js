@@ -160,8 +160,8 @@ const TRANSLATIONS = {
     'header.role': 'Ingénieur Logiciel',
     'header.specialization': 'Développement de Jeux Mobiles &amp; Applications',
 
-    'section.summary':    'Résumé des qualifications',
-    'section.experience': 'Expérience professionnelle',
+    'section.summary':    'Résumé des Qualifications',
+    'section.experience': 'Expérience Professionnelle',
     'section.games':      'Jeux',
     'section.tools':      'Outils',
     'section.education':  'Formation',
@@ -186,7 +186,7 @@ const TRANSLATIONS = {
       <li>Développé l'outil AutoBuilder (JavaFX + Bash Shell Scripting) pour automatiser les builds d'applications.</li>
       <li>Géré le gameplay principal, les systèmes multijoueurs, les publicités et l'intégration analytique avec Unity et SmartFox Server.</li>`,
 
-    'exp.2.title': 'Développeur de Jeux Mobiles — Associé',
+    'exp.2.title': 'Développeur de Jeux Mobiles',
     'exp.2.bullets': `
       <li>Développé un jeu de type Infinite Runner 2D pour Android/iOS avec Unity.</li>
       <li>Intégré GameSparks pour la connexion et les fonctionnalités de classement mondial.</li>
@@ -286,14 +286,14 @@ const TRANSLATIONS = {
     'edu.0.detail': 'Collège Centennial, Canada — GPA cumulatif : 4,352 sur 4,5 (96,71 %)',
     'edu.1.degree': 'Baccalauréat, Génie informatique',
     'edu.2.degree': 'Certificat, Concepteur de personnages 3D',
-    'edu.3.degree': "École préparatoire des cadets de l'armée de l'air — Force aérienne brésilienne",
+    'edu.3.degree': "École Préparatoire des cadets de l’Aéronautique — Force Aérienne Brésilienne",
     'edu.3.detail': "Élève militaire, lycée et fondamentaux de l'aviation militaire",
 
     // ── Bénévolat ─────────────────────────────────────────────────────────────
-    'vol.0.role': 'Membre, Comité consultatif du programme',
+    'vol.0.role': 'Membre, Comité Consultatif du Programme',
     'vol.0.org':  'Collège Centennial, Canada',
     'vol.0.desc': "Collaboré avec le collège pour fournir des tendances du secteur, conseiller sur la pertinence du curriculum, identifier les évolutions des exigences en compétences et s'assurer que le curriculum correspond aux besoins de l'industrie",
-    'vol.1.role': 'Force aérienne brésilienne',
+    'vol.1.role': 'Force Aérienne Brésilienne',
     'vol.1.org':  'Carandaí, Minas Gerais, Brésil',
     'vol.1.desc': "Aide humanitaire aux personnes sans-abri lors d'une catastrophe",
 
