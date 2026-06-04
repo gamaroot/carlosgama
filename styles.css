@@ -71,6 +71,40 @@ body {
     margin: 0 auto;
 }
 
+/* Language Switcher */
+.lang-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    display: flex;
+    border: 1px solid var(--secondary-color);
+    border-radius: 999px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.7rem;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    line-height: 1.5;
+}
+
+.lang-btn.active {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.lang-btn:hover:not(.active) {
+    color: var(--text-color);
+}
+
 /* Scrolled header */
 .header.scrolled {
     padding: 0.75rem 0;
@@ -110,6 +144,10 @@ main.scrolled {
 section {
     margin-bottom: var(--section-spacing);
     position: relative;
+}
+
+section:first-child {
+    margin-top: 2rem;
 }
 
 .section-title {
@@ -574,6 +612,11 @@ section.visible .section-title::after {
 }
 
 @media (max-width: 576px) {
+    .lang-switcher {
+        top: 0.6rem;
+        right: 0.75rem;
+    }
+
     .header {
         padding: 1.5rem 0;
         text-align: center;

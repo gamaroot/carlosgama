@@ -11,6 +11,10 @@
 </head>
 <body>
     <header class="header">
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="fr">FR</button>
+        </div>
         <div class="header-content">
             <div class="header-main">
                 <img src="./assets/profile.jpg" alt="Carlos Gama" class="profile-picture">
@@ -18,9 +22,9 @@
                     <div class="name-title">
                         <h1>Carlos Gama</h1>
                         <div class="title-container">
-                            <h2 class="role">Software Engineer</h2>
+                            <h2 class="role" data-i18n="header.role">Software Engineer</h2>
                             <span class="divider">•</span>
-                            <h2 class="specialization">Mobile Game & App Development</h2>
+                            <h2 class="specialization" data-i18n="header.specialization">Mobile Game &amp; App Development</h2>
                         </div>
                     </div>
 
@@ -45,20 +49,21 @@
 
     <main class="container">
         <section>
-            <h2 class="section-title"><i class="bi bi-briefcase"></i> Summary of Qualifications</h2>
-            <p>Software Developer since 2010, with 9 years of Android development and 12 years in Game development.</p>
+            <h2 class="section-title"><i class="bi bi-briefcase"></i> <span data-i18n="section.summary">Summary of Qualifications</span></h2>
+            <p data-i18n="summary.text">Software Developer since 2010, with 9 years of Android development and 12 years in Game development.</p>
         </section>
 
         <section>
-            <h2 class="section-title"><i class="bi bi-gear"></i> Professional Experience</h2>
+            <h2 class="section-title"><i class="bi bi-gear"></i> <span data-i18n="section.experience">Professional Experience</span></h2>
             <div id="professionalExperienceCarousel" class="carousel slide">
                 <div class="carousel-inner">
+                    <!-- 0 -->
                     <div class="carousel-item active">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Lead Software Engineer <span class="date-text">(Jan 2022 - Present)</span></h4>
+                                <h4 class="card-title"><span data-i18n="exp.0.title">Lead Software Engineer</span> <span class="date-text">(Jan 2022 - <span data-i18n="date.present">Present</span>)</span></h4>
                                 <p class="company-text">Gazeus Games, Montreal - Canada</p>
-                                <ul>
+                                <ul data-i18n="exp.0.bullets">
                                     <li>Led a team of Android and iOS specialists in game tool optimization.</li>
                                     <li>Mentored a remote team and collaborated with cross-functional teams.</li>
                                     <li>Managed roadmap planning and established communication with international partners.</li>
@@ -66,12 +71,13 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 1 -->
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Mobile Game Developer <span class="date-text">(Sep 2015 - Dec 2021)</span></h4>
+                                <h4 class="card-title"><span data-i18n="exp.1.title">Mobile Game Developer</span> <span class="date-text">(Sep 2015 - Dec 2021)</span></h4>
                                 <p class="company-text">Gazeus Games, Rio de Janeiro - Brazil</p>
-                                <ul>
+                                <ul data-i18n="exp.1.bullets">
                                     <li>Worked on the most popular classic card game in Brazil, Buraco Jogatina, and other mobile games using Unity, Lua, AndEngine, Android Java/Kotlin, Objective-C.</li>
                                     <li>Developed the AutoBuilder tool (JavaFX + Bash Shell Scripting) for automating app builds.</li>
                                     <li>Managed core gameplay, multiplayer systems, ads, and analytics integration using Unity and SmartFox Server.</li>
@@ -79,12 +85,13 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 2 -->
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Mobile Game Developer - Partner <span class="date-text">(Nov 2018 - Jan 2020)</span></h4>
+                                <h4 class="card-title"><span data-i18n="exp.2.title">Mobile Game Developer - Partner</span> <span class="date-text">(Nov 2018 - Jan 2020)</span></h4>
                                 <p class="company-text">CarnaBlocos, Rio de Janeiro - Brazil</p>
-                                <ul>
+                                <ul data-i18n="exp.2.bullets">
                                     <li>Developed a 2D Infinite Runner game for Android/iOS using Unity.</li>
                                     <li>Integrated GameSparks for login and global ranking features.</li>
                                     <li>Monetized using Google AdMob, IronSource, and InGame custom ads.</li>
@@ -92,56 +99,61 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 3 -->
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">System Developer <span class="date-text">(Mar 2015 – May 2015)</span></h4>
+                                <h4 class="card-title"><span data-i18n="exp.3.title">System Developer</span> <span class="date-text">(Mar 2015 – May 2015)</span></h4>
                                 <p class="company-text">Brazilian Navy, Rio de Janeiro - Brazil</p>
-                                <ul>
+                                <ul data-i18n="exp.3.bullets">
                                     <li>Developed ESB software using Java-based tools like Karaf and ServiceMix.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    <!-- 4 -->
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Mobile Game Developer <span class="date-text">(Aug 2012 – Nov 2013)</span></h4>
+                                <h4 class="card-title"><span data-i18n="exp.4.title">Mobile Game Developer</span> <span class="date-text">(Aug 2012 – Nov 2013)</span></h4>
                                 <p class="company-text">Oktagon Games, Rio de Janeiro - Brazil</p>
-                                <ul>
+                                <ul data-i18n="exp.4.bullets">
                                     <li>Worked on an online multiplayer mobile Unity game similar to Clash of Clans and a match-3 game using NgCore Engine with JavaScript.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    <!-- 5 -->
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Android Developer <span class="date-text">(Jan 2012 – Aug 2012)</span></h4>
+                                <h4 class="card-title"><span data-i18n="exp.5.title">Android Developer</span> <span class="date-text">(Jan 2012 – Aug 2012)</span></h4>
                                 <p class="company-text">True Systems, Rio de Janeiro - Brazil</p>
-                                <ul>
+                                <ul data-i18n="exp.5.bullets">
                                     <li>Migrated a Windows Phone app to Android, including UI redesign and performance optimization.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    <!-- 6 -->
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Android Developer Intern <span class="date-text">(Apr 2011 – Jan 2012)</span></h4>
+                                <h4 class="card-title"><span data-i18n="exp.6.title">Android Developer Intern</span> <span class="date-text">(Apr 2011 – Jan 2012)</span></h4>
                                 <p class="company-text">Declink, Rio de Janeiro - Brazil</p>
-                                <ul>
+                                <ul data-i18n="exp.6.bullets">
                                     <li>Worked on the migration of Rio de Janeiro's Traffic Infractions Management System from Palm OS to Android.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+                    <!-- 7 -->
                     <div class="carousel-item">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">System Analyst Intern <span class="date-text">(Oct 2010 – Apr 2011)</span></h4>
+                                <h4 class="card-title"><span data-i18n="exp.7.title">System Analyst Intern</span> <span class="date-text">(Oct 2010 – Apr 2011)</span></h4>
                                 <p class="company-text">Stefanini LATAM, Rio de Janeiro - Brazil</p>
-                                <ul>
+                                <ul data-i18n="exp.7.bullets">
                                     <li>Developed functional prototypes for desktop apps using .NET C#.</li>
                                 </ul>
                             </div>
@@ -150,199 +162,236 @@
                 </div>
                 <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#professionalExperienceCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="visually-hidden" data-i18n="carousel.prev">Previous</span>
                 </button>
                 <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#professionalExperienceCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="visually-hidden" data-i18n="carousel.next">Next</span>
                 </button>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title"><i class="bi bi-controller"></i> Games</h2>
+            <h2 class="section-title"><i class="bi bi-controller"></i> <span data-i18n="section.games">Games</span></h2>
             <div id="gamesCarousel" class="carousel slide">
                 <div class="carousel-inner">
+                    <!-- 0 Buraco -->
                     <div class="carousel-item active">
                         <img src="./assets/buraco-banner.jpg" alt="Buraco Jogatina" class="project-banner">
                         <h4 class="card-title"><a href="https://apps.jogatina.com/en/buraco/" target="_blank">Buraco Jogatina - Android/iOS (Unity)</a></h4>
                         <p class="company-text">Gazeus Games, Rio de Janeiro - Brazil</p>
-                        <p>Implemented the game and migrated it from AndEngine to Unity:</p>
-                        <ul>
-                            <li>Worked on single/multiplayer core gameplay and bots using Lua.</li>
-                            <li>Integrated multiplayer using SmartFox.</li>
-                            <li>Integrated Chat & Emoji features with animations created through Spine.</li>
-                            <li>Integrated Ads, Analytics, Push, Local Notifications, and Debug Mode tools.</li>
-                        </ul>
+                        <div data-i18n="game.0.desc">
+                            <p>Implemented the game and migrated it from AndEngine to Unity:</p>
+                            <ul>
+                                <li>Worked on single/multiplayer core gameplay and bots using Lua.</li>
+                                <li>Integrated multiplayer using SmartFox.</li>
+                                <li>Integrated Chat &amp; Emoji features with animations created through Spine.</li>
+                                <li>Integrated Ads, Analytics, Push, Local Notifications, and Debug Mode tools.</li>
+                            </ul>
+                        </div>
                     </div>
+                    <!-- 1 Dominoes Battle -->
                     <div class="carousel-item">
                         <img src="./assets/dominoes-battle-banner.jpg" alt="Dominoes Battle" class="project-banner">
                         <h4 class="card-title"><a href="https://apps.jogatina.com/en/dominoes-battle/" target="_blank">Dominoes Battle - Android/iOS (PixJS + Native Bridge)</a></h4>
                         <p class="company-text">Gazeus Games, Rio de Janeiro - Brazil</p>
-                        <p>Implemented Android and iOS native solutions, such as internal and 3rd party tools integrations, deep linking and solved Apple privacy compliances.</p>
+                        <div data-i18n="game.1.desc">
+                            <p>Implemented Android and iOS native solutions, such as internal and 3rd party tools integrations, deep linking and solved Apple privacy compliances.</p>
+                        </div>
                     </div>
+                    <!-- 2 Dominoes Jogatina -->
                     <div class="carousel-item">
                         <img src="./assets/dominoes-banner.jpg" alt="Dominoes Jogatina" class="project-banner">
                         <h4 class="card-title"><a href="https://apps.jogatina.com/en/dominoes/" target="_blank">Dominoes Jogatina - Android/iOS (Unity)</a></h4>
                         <p class="company-text">Gazeus Games, Rio de Janeiro - Brazil</p>
-                        <p>Worked on implementing seasonal promotions, ads, and analytics.</p>
+                        <div data-i18n="game.2.desc">
+                            <p>Worked on implementing seasonal promotions, ads, and analytics.</p>
+                        </div>
                     </div>
+                    <!-- 3 Blackjack -->
                     <div class="carousel-item">
                         <img src="./assets/blackjack-banner.jpg" alt="Blackjack Jogatina" class="project-banner">
                         <h4 class="card-title"><a href="https://apps.jogatina.com/en/blackjack/" target="_blank">Blackjack Jogatina - Android/iOS (Unity)</a></h4>
                         <p class="company-text">Gazeus Games, Rio de Janeiro - Brazil</p>
-                        <p>Implemented daily missions/rewards, integrated ads, analytics and push notification.</p>
+                        <div data-i18n="game.3.desc">
+                            <p>Implemented daily missions/rewards, integrated ads, analytics and push notification.</p>
+                        </div>
                     </div>
+                    <!-- 4 Other Jogatina -->
                     <div class="carousel-item">
                         <img src="./assets/small-games-banner.jpg" alt="Small Games from Jogatina" class="project-banner">
-                        <h4 class="card-title"><a href="https://apps.jogatina.com/en/" target="_blank">Other Jogatina Games - Android/iOS (Unity & AndEngine)</a></h4>
+                        <h4 class="card-title"><a href="https://apps.jogatina.com/en/" target="_blank">Other Jogatina Games - Android/iOS (Unity &amp; AndEngine)</a></h4>
                         <p class="company-text">Gazeus Games, Rio de Janeiro - Brazil</p>
-                        <p>Worked on several small/legacy Jogatina games using Unity and AndEngine (Android Only).</p>
+                        <div data-i18n="game.4.desc">
+                            <p>Worked on several small/legacy Jogatina games using Unity and AndEngine (Android Only).</p>
+                        </div>
                     </div>
+                    <!-- 5 Armies & Ants -->
                     <div class="carousel-item">
-                        <img src="./assets/armies-and-ants-banner.jpg" alt="Armies & Ants" class="project-banner">
-                        <h4 class="card-title"><a href="https://www.youtube.com/watch?v=MyXdo-RD3-I" target="_blank">Armies & Ants - Android/iOS (Unity)</a></h4>
+                        <img src="./assets/armies-and-ants-banner.jpg" alt="Armies &amp; Ants" class="project-banner">
+                        <h4 class="card-title"><a href="https://www.youtube.com/watch?v=MyXdo-RD3-I" target="_blank">Armies &amp; Ants - Android/iOS (Unity)</a></h4>
                         <p class="company-text">Oktagon Games, Rio de Janeiro - Brazil</p>
-                        <p>Worked on a chat system using SmartFox.</p>
+                        <div data-i18n="game.5.desc">
+                            <p>Worked on a chat system using SmartFox.</p>
+                        </div>
                     </div>
+                    <!-- 6 Viral Collapse -->
                     <div class="carousel-item">
-                        <img src="./assets/viral-collapse-banner.jpg" alt="Viral College" class="project-banner">
+                        <img src="./assets/viral-collapse-banner.jpg" alt="Viral Collapse" class="project-banner">
                         <h4 class="card-title"><a href="https://www.youtube.com/watch?v=5VC7qEIUKDE" target="_blank">Viral Collapse - Android/iOS (NgCore - JavaScript)</a></h4>
                         <p class="company-text">Oktagon Games, Rio de Janeiro - Brazil</p>
-                        <p>Developed some powerups, daily bonus with a spin machine and fixed legacy bugs.</p>
+                        <div data-i18n="game.6.desc">
+                            <p>Developed some powerups, daily bonus with a spin machine and fixed legacy bugs.</p>
+                        </div>
                     </div>
+                    <!-- 7 CarnaBlocos -->
                     <div class="carousel-item">
                         <img src="./assets/carnablocos-run-banner.jpg" alt="CarnaBlocos Run" class="project-banner">
                         <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.carnablocos" target="_blank">CarnaBlocos - Android/iOS (Unity)</a></h4>
                         <p class="company-text">CarnaBlocos, Rio de Janeiro - Brazil</p>
-                        <p>Developed a 2D Infinite Runner game using GameSparks for login and global rankings, and integrated multiple ad networks for monetization.</p>
+                        <div data-i18n="game.7.desc">
+                            <p>Developed a 2D Infinite Runner game using GameSparks for login and global rankings, and integrated multiple ad networks for monetization.</p>
+                        </div>
                     </div>
+                    <!-- 8 Pixel Brawl -->
                     <div class="carousel-item">
                         <img src="./assets/pixel-brawl-banner.jpg" alt="Pixel Brawl" class="project-banner">
                         <h4 class="card-title"><a href="https://carlosgama.itch.io/pixel-brawl" target="_blank">Pixel Brawl - Windows (Unity)</a></h4>
                         <p class="company-text">Centennial College, Toronto - Canada</p>
-                        <p class="card-text"><strong>Presentation Slides:</strong> <a href="https://docs.google.com/presentation/d/1C03R1gT_Jifr8liHOEu1Q50PDrE5WtAtbg-Ee_v6fQw/edit#slide=id.g2d6ad56c6bd_0_452" target="_blank">Google Slides</a></p>
-                        <p><strong>Demo:</strong> <a href="https://youtu.be/17__qGoin3c" target="_blank">YouTube Video</a></p>
-                        <p>Academic project for my Game Programming course at Centennial College. A roguelite shooter inspired by classics like The Binding of Isaac and Enter the Gungeon. Players battle enemies in randomly generated rooms. I worked for 3 months on this game for PC using Unity.</p>
-                        <ul>
-                            <li>Implemented player controller using new Unity's Input System with Gamepad and Keyboard/Mouse support.</li>
-                            <li>Implemented Gamepad and Keyboard/Mouse UI Navigation support.</li>
-                            <li>Implemented procedural map generation.</li>
-                            <li>Used Unity Internationalization System for 7 languages.</li>
-                            <li>Designed AI using Unity's Behavior System.</li>
-                            <li>Used Shader Graph for health feedback.</li>
-                            <li>Implemented mechanics such as move, shoot, parry and dash with invincibility frames.</li>
-                            <li>Developed Debug Mode for testing all features.</li>
-                            <li>Structured the project in modules using Assembly Definition.</li>
-                            <li>Wrote Play/Edit Mode automated tests.</li>
-                        </ul>
+                        <p class="card-text"><strong data-i18n="game.8.slides-label">Presentation Slides:</strong> <a href="https://docs.google.com/presentation/d/1C03R1gT_Jifr8liHOEu1Q50PDrE5WtAtbg-Ee_v6fQw/edit#slide=id.g2d6ad56c6bd_0_452" target="_blank">Google Slides</a></p>
+                        <p><strong data-i18n="game.8.demo-label">Demo:</strong> <a href="https://youtu.be/17__qGoin3c" target="_blank">YouTube Video</a></p>
+                        <div data-i18n="game.8.desc">
+                            <p>Academic project for my Game Programming course at Centennial College. A roguelite shooter inspired by classics like The Binding of Isaac and Enter the Gungeon. Players battle enemies in randomly generated rooms. I worked for 3 months on this game for PC using Unity.</p>
+                            <ul>
+                                <li>Implemented player controller using new Unity's Input System with Gamepad and Keyboard/Mouse support.</li>
+                                <li>Implemented Gamepad and Keyboard/Mouse UI Navigation support.</li>
+                                <li>Implemented procedural map generation.</li>
+                                <li>Used Unity Internationalization System for 7 languages.</li>
+                                <li>Designed AI using Unity's Behavior System.</li>
+                                <li>Used Shader Graph for health feedback.</li>
+                                <li>Implemented mechanics such as move, shoot, parry and dash with invincibility frames.</li>
+                                <li>Developed Debug Mode for testing all features.</li>
+                                <li>Structured the project in modules using Assembly Definition.</li>
+                                <li>Wrote Play/Edit Mode automated tests.</li>
+                            </ul>
+                        </div>
                     </div>
+                    <!-- 9 Idle Wars -->
                     <div class="carousel-item">
                         <img src="./assets/idle-wars-banner.jpg" alt="Idle Wars" class="project-banner">
                         <h4 class="card-title"><a href="https://play.google.com/store/apps/details?id=com.devjim.idle.wars&hl=en_CA" target="_blank">Idle Wars: Defend the Galaxy - Android (Unity)</a></h4>
                         <p class="company-text">Centennial College, Toronto - Canada</p>
-                        <p>Academic project for my Game Programming course at Centennial College. Idle game with an auto-shooting mechanic, where players upgrade their weapons to defeat waves of enemies.</p>
-                        <ul>
-                            <li>Implemented GDPR compliance using Google UMP.</li>
-                            <li>Implemented monetization via Adaptive Banner and Rewarded Video using AdMob.</li>
-                        </ul>
+                        <div data-i18n="game.9.desc">
+                            <p>Academic project for my Game Programming course at Centennial College. Idle game with an auto-shooting mechanic, where players upgrade their weapons to defeat waves of enemies.</p>
+                            <ul>
+                                <li>Implemented GDPR compliance using Google UMP.</li>
+                                <li>Implemented monetization via Adaptive Banner and Rewarded Video using AdMob.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#gamesCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="visually-hidden" data-i18n="carousel.prev">Previous</span>
                 </button>
                 <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#gamesCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="visually-hidden" data-i18n="carousel.next">Next</span>
                 </button>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title"><i class="bi bi-tools"></i> Tools</h2>
+            <h2 class="section-title"><i class="bi bi-tools"></i> <span data-i18n="section.tools">Tools</span></h2>
             <div id="toolsCarousel" class="carousel slide">
                 <div class="carousel-inner">
+                    <!-- 0 AutoBuilder -->
                     <div class="carousel-item active">
                         <img src="./assets/autobuilder-banner.jpg" alt="Auto Builder" class="project-banner">
                         <h4 class="card-title"><a href="#" target="_blank">AutoBuilder - Windows/MacOS (Java FX / Bash Scripting)</a></h4>
                         <p class="company-text">Gazeus Games, Rio de Janeiro - Brazil</p>
-                        <p>Developed a tool that generates Android/iOS apps from a JavaScript game project:</p>
-                        <ul>
-                            <li>Provides both local and CI build pipelines.</li>
-                            <li>Displays the log from connected device.</li>
-                            <li>Integrated Firebase App Distribution.</li>
-                            <li>Automatically generates release notes (commits + dependencies).</li>
-                        </ul>
+                        <div data-i18n="tool.0.desc">
+                            <p>Developed a tool that generates Android/iOS apps from a JavaScript game project:</p>
+                            <ul>
+                                <li>Provides both local and CI build pipelines.</li>
+                                <li>Displays the log from connected device.</li>
+                                <li>Integrated Firebase App Distribution.</li>
+                                <li>Automatically generates release notes (commits + dependencies).</li>
+                            </ul>
+                        </div>
                     </div>
+                    <!-- 1 Privacy / Analytics -->
                     <div class="carousel-item">
-                        <h4 class="card-title"><a href="#" target="_blank">Data Privacy, Analytics Hub & Ad Mediation Tools (Android / iOS)</a></h4>
+                        <h4 class="card-title"><a href="#" target="_blank">Data Privacy, Analytics Hub &amp; Ad Mediation Tools (Android / iOS)</a></h4>
                         <p class="company-text">Gazeus Games, Montreal - Canada</p>
-                        <p>Worked on a unified interface for ad mediation, data privacy, and analytics, having the following features:</p>
-                        <ul>
-                            <li>A facade to unify interactions with analytics and ads mediation systems.</li>
-                            <li>Data privacy center following compliant with the IAB TCF, allowing clients to manage user privacy preferences and process data deletion requests.</li>
-                            <li>Analytics hub that integrates multiple SDKs, allowing clients to distribute analytics events across multiple providers.</li>
-                            <li>Advanced ad mediation system using Crazyfall logic with multiple ad network SDKs integrations.</li>
-                            <li>Dynamic tag configurations for flexible ad placements.</li>
-                            <li>A/B testing capabilities for ad performance optimization.</li>
-                        </ul>
+                        <div data-i18n="tool.1.desc">
+                            <p>Worked on a unified interface for ad mediation, data privacy, and analytics, having the following features:</p>
+                            <ul>
+                                <li>A facade to unify interactions with analytics and ads mediation systems.</li>
+                                <li>Data privacy center compliant with the IAB TCF, allowing clients to manage user privacy preferences and process data deletion requests.</li>
+                                <li>Analytics hub that integrates multiple SDKs, allowing clients to distribute analytics events across multiple providers.</li>
+                                <li>Advanced ad mediation system using Crazyfall logic with multiple ad network SDKs integrations.</li>
+                                <li>Dynamic tag configurations for flexible ad placements.</li>
+                                <li>A/B testing capabilities for ad performance optimization.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#toolsCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="visually-hidden" data-i18n="carousel.prev">Previous</span>
                 </button>
                 <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#toolsCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="visually-hidden" data-i18n="carousel.next">Next</span>
                 </button>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title"><i class="bi bi-mortarboard"></i> Education</h2>
-            <p><strong>Advanced Diploma, Game Programming</strong> (Sep 2022 - Apr 2025)<br><i>Centennial College, Canada - Cumulative GPA: 4.352 of 4.5 (96.71%)</i></p>
-            <p><strong>Bachelor's degree, Computer Engineering</strong> (Jun 2010 - Dec 2015, Incomplete)<br><i>Infnet Institute, Brazil</i></p>
-            <p><strong>Certificate, 3D Character Designer</strong> (Nov 2012 - Feb 2013)<br><i>Infnet Institute, Brazil</i></p>
-            <p><strong>Air Force Cadets Preparatory School - Brazilian Air Force</strong> (Jan 2007 - Aug 2009)<br><i>Military Student, High School & Fundamentals of Military Aviation</i></p>
+            <h2 class="section-title"><i class="bi bi-mortarboard"></i> <span data-i18n="section.education">Education</span></h2>
+            <p><strong data-i18n="edu.0.degree">Advanced Diploma, Game Programming</strong> (Sep 2022 - Apr 2025)<br><i data-i18n="edu.0.detail">Centennial College, Canada — Cumulative GPA: 4.352 of 4.5 (96.71%)</i></p>
+            <p><strong data-i18n="edu.1.degree">Bachelor's degree, Computer Engineering</strong> (Jun 2010 - Dec 2015, <span data-i18n="edu.incomplete">Incomplete</span>)<br><i>Infnet Institute, Brazil</i></p>
+            <p><strong data-i18n="edu.2.degree">Certificate, 3D Character Designer</strong> (Nov 2012 - Feb 2013)<br><i>Infnet Institute, Brazil</i></p>
+            <p><strong data-i18n="edu.3.degree">Air Force Cadets Preparatory School — Brazilian Air Force</strong> (Jan 2007 - Aug 2009)<br><i data-i18n="edu.3.detail">Military Student, High School &amp; Fundamentals of Military Aviation</i></p>
         </section>
 
         <section>
-            <h2 class="section-title"><i class="bi bi-person-check"></i> Volunteer Experience</h2>
+            <h2 class="section-title"><i class="bi bi-person-check"></i> <span data-i18n="section.volunteer">Volunteer Experience</span></h2>
             <div class="volunteer-entry">
-                <strong>Member, Program Advisory Committee</strong> (Nov 2024 - Present)<br>
-                <i>Centennial College, Canada</i>
-                <p>Collaborated with the college to provide industry trends, advise on curriculum relevance, identify changes in skill and knowledge requirements, and ensure the curriculum aligns with industry needs <i>(Reference: <a href="https://www.centennialcollege.ca/about-centennial/centres-and-institutes/teaching-excellence-and-academic-quality/academic-quality-assurance/program-advisory-committee">link</a>)</i>.</p>
+                <strong data-i18n="vol.0.role">Member, Program Advisory Committee</strong> (Nov 2024 - <span data-i18n="date.present">Present</span>)<br>
+                <i data-i18n="vol.0.org">Centennial College, Canada</i>
+                <p><span data-i18n="vol.0.desc">Collaborated with the college to provide industry trends, advise on curriculum relevance, identify changes in skill and knowledge requirements, and ensure the curriculum aligns with industry needs</span> <i>(Reference: <a href="https://www.centennialcollege.ca/about-centennial/centres-and-institutes/teaching-excellence-and-academic-quality/academic-quality-assurance/program-advisory-committee">link</a>)</i>.</p>
             </div>
             <div class="volunteer-entry">
-                <strong>Brazilian Air Force</strong> (Sep 2008)<br>
-                <i>Carandaí, Minas Gerais, Brazil</i>
-                <p>Humanitarian aid to the homeless in a disaster <i>(S.O.S. Carandaí - <a href="https://www-fab-mil-br.translate.goog/noticias/imprime/1444/EPCAR%20presta%20socorro%20%C3%A0s%20v%C3%ADtimas%20da%20chuva%20de%20granizo%20no%20interior%20de%20MG?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp">link</a>)</i>.</p>
+                <strong data-i18n="vol.1.role">Brazilian Air Force</strong> (Sep 2008)<br>
+                <i data-i18n="vol.1.org">Carandaí, Minas Gerais, Brazil</i>
+                <p><span data-i18n="vol.1.desc">Humanitarian aid to the homeless in a disaster</span> <i>(S.O.S. Carandaí - <a href="https://www-fab-mil-br.translate.goog/noticias/imprime/1444/EPCAR%20presta%20socorro%20%C3%A0s%20v%C3%ADtimas%20da%20chuva%20de%20granizo%20no%20interior%20de%20MG?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp">link</a>)</i>.</p>
             </div>
         </section>
 
         <section>
-            <h2 class="section-title"><i class="bi bi-translate"></i> Languages</h2>
+            <h2 class="section-title"><i class="bi bi-translate"></i> <span data-i18n="section.languages">Languages</span></h2>
             <div class="language-list">
                 <div class="language-item">
-                    <span class="language-name">French</span>
-                    <span class="language-level advanced">Advanced</span>
-                    <a href="https://drive.google.com/file/d/1WczhjfPWav2KnSYSQNxZ2nIMfJEtgbmk/view?usp=sharing" target="_blank" class="language-cert"><i class="bi bi-patch-check-fill"></i> Certificate</a>
+                    <span class="language-name" data-i18n="lang.portuguese">Portuguese</span>
+                    <span class="language-level native" data-i18n="lang.native">Native</span>
                 </div>
                 <div class="language-item">
-                    <span class="language-name">English</span>
-                    <span class="language-level advanced">Advanced</span>
+                    <span class="language-name" data-i18n="lang.english">English</span>
+                    <span class="language-level advanced" data-i18n="lang.advanced">Advanced</span>
                 </div>
                 <div class="language-item">
-                    <span class="language-name">Portuguese</span>
-                    <span class="language-level native">Native</span>
+                    <span class="language-name" data-i18n="lang.french">French</span>
+                    <span class="language-level advanced" data-i18n="lang.advanced">Advanced</span>
+                    <a href="https://drive.google.com/file/d/1WczhjfPWav2KnSYSQNxZ2nIMfJEtgbmk/view?usp=sharing" target="_blank" class="language-cert"><i class="bi bi-patch-check-fill"></i> <span data-i18n="lang.cert">Certificate</span></a>
                 </div>
             </div>
         </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
