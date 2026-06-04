@@ -45,34 +45,6 @@ function initTypewriter() {
     setTimeout(type, 300);
 }
 
-// ── 3D Card Tilt (desktop only) ───────────────────────────────────────────────
-function initCardTilt() {
-    if (!window.matchMedia('(hover: hover)').matches) return;
-
-    let lastCard = null;
-
-    document.addEventListener('mousemove', e => {
-        const card = e.target.closest('.card');
-
-        if (lastCard && lastCard !== card) {
-            lastCard.style.transition = 'box-shadow 0.3s ease, transform 0.55s ease';
-            lastCard.style.transform  = '';
-            lastCard = null;
-        }
-
-        if (!card) return;
-
-        lastCard = card;
-        card.style.transition = 'box-shadow 0.3s ease, transform 0.08s linear';
-
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width  - 0.5;
-        const y = (e.clientY - rect.top)  / rect.height - 0.5;
-
-        card.style.transform = `perspective(900px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg) translateY(-5px)`;
-    });
-}
-
 // ── Carousel Counters ─────────────────────────────────────────────────────────
 function initCarouselCounters() {
     ['gamesCarousel', 'toolsCarousel', 'professionalExperienceCarousel'].forEach(id => {
@@ -180,7 +152,6 @@ function initI18n() {
 document.addEventListener('DOMContentLoaded', () => {
     initScrollProgress();
     initTypewriter();
-    initCardTilt();
     initCarouselCounters();
     initBannerWrappers();
     initScrollReveal();

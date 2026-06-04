@@ -162,7 +162,7 @@ const TRANSLATIONS = {
 
     'section.summary':    'Résumé des Qualifications',
     'section.experience': 'Expérience Professionnelle',
-    'section.games':      'Jeux',
+    'section.games':      'Jeux Vidéo',
     'section.tools':      'Outils',
     'section.education':  'Formation',
     'section.volunteer':  'Bénévolat',
@@ -171,7 +171,7 @@ const TRANSLATIONS = {
     'date.present':   'Présent',
     'edu.incomplete': 'Non complété',
 
-    'summary.text': 'Développeur logiciel depuis 2010, avec 9 ans de développement Android et 12 ans dans le développement de jeux.',
+    'summary.text': 'Développeur logiciel depuis 2010, avec 9 ans de développement Android et 12 ans dans le développement de jeux vidéo.',
 
     // ── Expérience professionnelle ────────────────────────────────────────────
     'exp.0.title': 'Ingénieur Logiciel Principal',
@@ -282,16 +282,16 @@ const TRANSLATIONS = {
       </ul>`,
 
     // ── Formation ─────────────────────────────────────────────────────────────
-    'edu.0.degree': 'Diplôme avancé, Programmation de jeux',
-    'edu.0.detail': 'Collège Centennial, Canada - GPA cumulatif : 4,352 sur 4,5 (96,71 %)',
-    'edu.1.degree': 'Baccalauréat, Génie informatique',
-    'edu.2.degree': 'Certificat, Concepteur de personnages 3D',
-    'edu.3.degree': "École Préparatoire des cadets de l’Aéronautique - Force Aérienne Brésilienne",
+    'edu.0.degree': 'Diplôme avancé, Programmation de Jeux Vidéo',
+    'edu.0.detail': 'Centennial College, Canada - GPA cumulatif : 4,352 sur 4,5 (96,71 %)',
+    'edu.1.degree': 'Baccalauréat, Ingénierie Informatique',
+    'edu.2.degree': 'Certificat, Concepteur de Personnages 3D',
+    'edu.3.degree': "École Préparatoire des Cadets de l’Aéronautique - Force Aérienne Brésilienne",
     'edu.3.detail': "Élève militaire, lycée et fondamentaux de l'aviation militaire",
 
     // ── Bénévolat ─────────────────────────────────────────────────────────────
     'vol.0.role': 'Membre, Comité Consultatif du Programme',
-    'vol.0.org':  'Collège Centennial, Canada',
+    'vol.0.org':  'Centennial College, Canada',
     'vol.0.desc': "Collaboré avec le collège pour fournir des tendances du secteur, conseiller sur la pertinence du curriculum, identifier les évolutions des exigences en compétences et s'assurer que le curriculum correspond aux besoins de l'industrie",
     'vol.1.role': 'Force Aérienne Brésilienne',
     'vol.1.org':  'Carandaí, Minas Gerais, Brésil',

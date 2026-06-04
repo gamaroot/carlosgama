@@ -218,7 +218,7 @@ section:first-child {
     border: none;
     border-radius: 12px;
     box-shadow: var(--card-shadow);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: all var(--transition-speed);
     overflow: hidden;
     background-color: var(--card-bg);
     position: relative;
@@ -707,6 +707,15 @@ section.visible .section-title::after {
     .lang-switcher {
         top: 0.6rem;
         right: 0.75rem;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+
+    .section-title i {
+        font-size: 1.15rem;
+        margin-right: 0.4rem;
     }
 
     .header {
