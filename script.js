@@ -18,12 +18,29 @@ function adjustCarouselHeight(carouselId) {
     }
 }
 
+// Scroll-reveal via Intersection Observer
+function initScrollReveal() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
+}
+
 // Initialize everything when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Header scroll effect
     window.addEventListener('scroll', handleHeaderScroll);
     handleHeaderScroll(); // Initial check
-    
+
+    // Scroll-reveal
+    initScrollReveal();
+
     // Initialize carousels
     ['gamesCarousel', 'toolsCarousel', 'professionalExperienceCarousel'].forEach(id => {
         const carousel = document.querySelector(`#${id}`);
