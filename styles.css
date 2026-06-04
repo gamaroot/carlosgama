@@ -347,11 +347,13 @@ a:hover::after {
     opacity: 1;
 }
 
-#gamesCarousel:hover .custom-carousel-control,
-#toolsCarousel:hover .custom-carousel-control,
-#professionalExperienceCarousel:hover .custom-carousel-control {
-    background-color: rgba(0, 0, 0, 0.1);
-    opacity: 0.8;
+@media (hover: hover) {
+    #gamesCarousel:hover .custom-carousel-control,
+    #toolsCarousel:hover .custom-carousel-control,
+    #professionalExperienceCarousel:hover .custom-carousel-control {
+        background-color: rgba(0, 0, 0, 0.1);
+        opacity: 0.8;
+    }
 }
 
 /* Contact Styles */
@@ -491,17 +493,28 @@ a:hover::after {
         height: 200px;
     }
 
-    .carousel-control-prev.custom-carousel-control,
-    .carousel-control-next.custom-carousel-control {
-        width: 40px;
+    .custom-carousel-control {
+        width: 36px;
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.45);
+        border-radius: 8px;
+        height: 48px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .carousel-control-prev.custom-carousel-control {
-        left: -15px;
+        left: 4px;
+        border-radius: 8px;
     }
 
     .carousel-control-next.custom-carousel-control {
-        right: -15px;
+        right: 4px;
+        border-radius: 8px;
+    }
+
+    .custom-carousel-control:hover {
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
     main {
