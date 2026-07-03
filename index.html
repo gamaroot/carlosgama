@@ -18,7 +18,13 @@
         </div>
         <div class="header-content">
             <div class="header-main">
-                <img src="./assets/profile.jpg" alt="Carlos Gama" class="profile-picture">
+                <div class="profile-picture-wrapper" id="profilePictureWrapper" role="button" tabindex="0" aria-label="Play video">
+                    <img src="./assets/profile.jpg" alt="Carlos Gama" class="profile-picture" id="profileImage">
+                    <video class="profile-video" id="profileVideo" playsinline preload="none">
+                        <source src="./assets/french.mp4" type="video/mp4">
+                    </video>
+                    <div class="profile-play-icon" id="profilePlayIcon"><i class="bi bi-play-fill"></i></div>
+                </div>
                 <div class="profile-info">
                     <div class="name-title">
                         <h1>Carlos Gama</h1>

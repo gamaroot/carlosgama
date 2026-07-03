@@ -88,6 +88,57 @@ function adjustCarouselHeight(carouselId) {
     }
 }
 
+// ── Profile Picture Video ─────────────────────────────────────────────────────
+function updateProfileVideoSource(lang) {
+    const video = document.querySelector('#profileVideo');
+    if (!video) return;
+
+    const source = video.querySelector('source');
+    const file   = lang === 'en' ? 'english.mp4' : 'french.mp4';
+    const newSrc = `./assets/${file}`;
+    if (source.getAttribute('src') === newSrc) return;
+
+    const wasPlaying = !video.paused;
+    source.setAttribute('src', newSrc);
+    video.load();
+    if (wasPlaying) video.play().catch(() => {});
+}
+
+function initProfileVideo() {
+    const wrapper = document.querySelector('#profilePictureWrapper');
+    const video   = document.querySelector('#profileVideo');
+    if (!wrapper || !video) return;
+
+    const play = () => {
+        wrapper.classList.add('playing');
+        video.currentTime = 0;
+        video.play().catch(() => {});
+    };
+
+    const stop = () => {
+        wrapper.classList.remove('playing');
+        video.pause();
+    };
+
+    const toggle = () => {
+        if (wrapper.classList.contains('playing')) {
+            stop();
+        } else {
+            play();
+        }
+    };
+
+    wrapper.addEventListener('click', toggle);
+    wrapper.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggle();
+        }
+    });
+
+    video.addEventListener('ended', stop);
+}
+
 // ── Banner Zoom Wrapper ───────────────────────────────────────────────────────
 function initBannerWrappers() {
     document.querySelectorAll('.project-banner').forEach(img => {
@@ -126,6 +177,7 @@ function setTranslations(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.lang === lang);
     });
+    updateProfileVideoSource(lang);
     localStorage.setItem('lang', lang);
 }
 
@@ -153,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollProgress();
     initTypewriter();
     initCarouselCounters();
+    initProfileVideo();
     initBannerWrappers();
     initScrollReveal();
     initI18n();

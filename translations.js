@@ -15,7 +15,7 @@ const TRANSLATIONS = {
     'date.present':    'Present',
     'edu.incomplete':  'Incomplete',
 
-    'summary.text': 'Software Developer since 2010, with 9 years of Android development and 12 years in Game development.',
+    'summary.text': 'Software Developer since 2010, specialized in Android and Game development.',
 
     // ── Professional Experience ───────────────────────────────────────────────
     'exp.0.title': 'Lead Software Engineer',
@@ -171,114 +171,114 @@ const TRANSLATIONS = {
     'date.present':   'Présent',
     'edu.incomplete': 'Non complété',
 
-    'summary.text': 'Développeur logiciel depuis 2010: 9 ans en développement Android, 12 ans en développement de jeux vidéo.',
+    'summary.text': 'Développeur logiciel depuis 2010, spécialisé en Android et jeux vidéo.',
 
     // ── Expérience professionnelle ────────────────────────────────────────────
     'exp.0.title': 'Ingénieur Logiciel Principal',
     'exp.0.bullets': `
-      <li>Dirigé une équipe Android/iOS en optimisation d'outils de jeu.</li>
-      <li>Encadré une équipe à distance et collaboré avec des équipes pluridisciplinaires.</li>
-      <li>Planifié la feuille de route et assuré les relations avec partenaires internationaux.</li>`,
+      <li>Direction d'une équipe Android/iOS pour l'optimisation d'outils de jeu.</li>
+      <li>Encadrement d'une équipe à distance et collaboration avec des équipes pluridisciplinaires.</li>
+      <li>Planification de la feuille de route et gestion des relations avec les partenaires internationaux.</li>`,
 
     'exp.1.title': 'Développeur de Jeux Mobiles',
     'exp.1.bullets': `
-      <li>Développé Buraco Jogatina (jeu de cartes n°1 au Brésil) et d'autres jeux mobiles avec Unity, Lua, AndEngine, Java/Kotlin et Objective-C.</li>
-      <li>Créé AutoBuilder (JavaFX + Bash) pour automatiser les builds Android/iOS.</li>
-      <li>Géré gameplay, multijoueur, publicités et analytique via Unity et SmartFox.</li>`,
+      <li>Développement de Buraco Jogatina (jeu de cartes n°1 au Brésil) et d'autres jeux mobiles avec Unity, Lua, AndEngine, Java/Kotlin et Objective-C.</li>
+      <li>Création d'AutoBuilder (JavaFX + Bash) pour automatiser les builds Android/iOS.</li>
+      <li>Gestion du gameplay, du multijoueur, des publicités et de l'analytique via Unity et SmartFox.</li>`,
 
     'exp.2.title': 'Développeur de Jeux Mobiles',
     'exp.2.bullets': `
-      <li>Développé un Infinite Runner 2D Android/iOS avec Unity.</li>
-      <li>Intégré GameSparks (connexion, classements mondiaux).</li>
-      <li>Monétisé via AdMob, IronSource et publicités in-game.</li>`,
+      <li>Développement d'un Infinite Runner 2D Android/iOS avec Unity.</li>
+      <li>Intégration de GameSparks (connexion, classements mondiaux).</li>
+      <li>Monétisation via AdMob, IronSource et publicités in-game.</li>`,
 
     'exp.3.title': 'Développeur Système',
     'exp.3.bullets': `
-      <li>Développé un ESB avec Karaf et ServiceMix (Java).</li>`,
+      <li>Développement d'un ESB avec Karaf et ServiceMix (Java).</li>`,
 
     'exp.4.title': 'Développeur de Jeux Mobiles',
     'exp.4.bullets': `
-      <li>Développé un jeu Unity multijoueur (style Clash of Clans) et un match-3 avec NgCore/JavaScript.</li>`,
+      <li>Développement d'un jeu Unity multijoueur (style Clash of Clans) et d'un match-3 avec NgCore/JavaScript.</li>`,
 
     'exp.5.title': 'Développeur Android',
     'exp.5.bullets': `
-      <li>Migré une app Windows Phone vers Android - refonte UI et optimisation des performances.</li>`,
+      <li>Migration d'une application Windows Phone vers Android - refonte de l'UI et optimisation des performances.</li>`,
 
     'exp.6.title': 'Stagiaire Développeur Android',
     'exp.6.bullets': `
-      <li>Migration du Système de Gestion des Infractions Routières de Rio de Janeiro - Palm OS vers Android.</li>`,
+      <li>Migration du Système de Gestion des Infractions Routières de Rio de Janeiro - de Palm OS vers Android.</li>`,
 
     'exp.7.title': 'Stagiaire Analyste Système',
     'exp.7.bullets': `
-      <li>Prototypes d'applications de bureau en .NET C#.</li>`,
+      <li>Développement de prototypes d'applications de bureau en .NET C#.</li>`,
 
     // ── Jeux Vidéo ────────────────────────────────────────────────────────────
     'game.0.desc': `
       <p>Migration d'AndEngine vers Unity :</p>
       <ul>
-        <li>Gameplay solo/multijoueur et bots en Lua.</li>
-        <li>Multijoueur via SmartFox.</li>
-        <li>Chat et emojis animés via Spine.</li>
-        <li>Publicités, analytique, notifications push/locales et mode débogage.</li>
+        <li>Développement du gameplay solo/multijoueur et des bots en Lua.</li>
+        <li>Intégration du multijoueur via SmartFox.</li>
+        <li>Intégration du chat et des émojis animés via Spine.</li>
+        <li>Intégration des publicités, de l'analytique, des notifications push/locales et du mode débogage.</li>
       </ul>`,
 
-    'game.1.desc': `<p>Solutions natives Android/iOS : intégrations tierces, liens profonds et conformité Apple.</p>`,
+    'game.1.desc': `<p>Implémentation de solutions natives Android/iOS : intégrations tierces, liens profonds, et mise en conformité avec les règles de confidentialité Apple.</p>`,
 
-    'game.2.desc': `<p>Promotions saisonnières, publicités et analytique.</p>`,
+    'game.2.desc': `<p>Mise en place de promotions saisonnières, de publicités et d'analytique.</p>`,
 
-    'game.3.desc': `<p>Missions/récompenses quotidiennes, publicités, analytique et notifications push.</p>`,
+    'game.3.desc': `<p>Implémentation de missions/récompenses quotidiennes, de publicités, d'analytique et de notifications push.</p>`,
 
     'game.4.desc': `<p>Maintenance de jeux Jogatina existants - Unity et AndEngine (Android).</p>`,
 
-    'game.5.desc': `<p>Système de chat via SmartFox.</p>`,
+    'game.5.desc': `<p>Développement d'un système de chat via SmartFox.</p>`,
 
-    'game.6.desc': `<p>Bonus spéciaux, machine à sous quotidienne et corrections de bugs.</p>`,
+    'game.6.desc': `<p>Développement de bonus spéciaux et d'une machine à sous quotidienne, et correction de bugs hérités.</p>`,
 
-    'game.7.desc': `<p>Infinite Runner 2D avec GameSparks (connexion, classements) et intégration multi-réseaux publicitaires.</p>`,
+    'game.7.desc': `<p>Développement d'un Infinite Runner 2D avec GameSparks (connexion, classements) et intégration de plusieurs réseaux publicitaires pour la monétisation.</p>`,
 
     'game.8.slides-label': 'Présentation :',
     'game.8.demo-label':   'Démo :',
     'game.8.desc': `
       <p>Projet académique - Collège Centennial. Jeu de tir roguelite inspiré de The Binding of Isaac et Enter the Gungeon, en salles générées aléatoirement. 3 mois de développement sur PC avec Unity.</p>
       <ul>
-        <li>Contrôleur joueur (Input System Unity) - manette et clavier/souris.</li>
-        <li>Navigation UI manette et clavier/souris.</li>
-        <li>Génération de carte procédurale.</li>
-        <li>Internationalisation Unity - 7 langues.</li>
-        <li>IA avec le Behavior System Unity.</li>
-        <li>Shader Graph pour le feedback visuel de santé.</li>
-        <li>Mécaniques : déplacement, tir, parade, esquive avec i-frames.</li>
-        <li>Mode débogage complet.</li>
-        <li>Architecture modulaire via Assembly Definition.</li>
-        <li>Tests automatisés Play/Edit Mode.</li>
+        <li>Implémentation du contrôleur du joueur (Input System Unity) avec support manette et clavier/souris.</li>
+        <li>Implémentation de la navigation UI en manette et clavier/souris.</li>
+        <li>Implémentation de la génération de carte procédurale.</li>
+        <li>Utilisation du système d'internationalisation Unity pour 7 langues.</li>
+        <li>Conception de l'IA avec le Behavior System Unity.</li>
+        <li>Utilisation de Shader Graph pour le retour visuel de santé.</li>
+        <li>Implémentation des mécaniques de déplacement, tir, parade et esquive avec i-frames d'invincibilité.</li>
+        <li>Développement d'un mode débogage complet.</li>
+        <li>Structuration du projet en modules via Assembly Definition.</li>
+        <li>Rédaction de tests automatisés Play/Edit Mode.</li>
       </ul>`,
 
     'game.9.desc': `
       <p>Projet académique - Collège Centennial. Jeu idle à tir automatique ; amélioration d'armes contre des vagues d'ennemis.</p>
       <ul>
-        <li>Conformité RGPD via Google UMP.</li>
-        <li>Monétisation via bannière adaptative et vidéo récompensée (AdMob).</li>
+        <li>Implémentation de la conformité RGPD via Google UMP.</li>
+        <li>Implémentation de la monétisation via bannière adaptative et vidéo récompensée (AdMob).</li>
       </ul>`,
 
     // ── Outils ────────────────────────────────────────────────────────────────
     'tool.0.desc': `
       <p>Outil de génération d'apps Android/iOS depuis un projet JavaScript :</p>
       <ul>
-        <li>Pipelines de build locaux et CI.</li>
-        <li>Journaux du périphérique connecté.</li>
-        <li>Intégration Firebase App Distribution.</li>
-        <li>Notes de version automatiques (commits + dépendances).</li>
+        <li>Mise à disposition de pipelines de build locaux et CI.</li>
+        <li>Affichage des journaux du périphérique connecté.</li>
+        <li>Intégration de Firebase App Distribution.</li>
+        <li>Génération automatique des notes de version (commits + dépendances).</li>
       </ul>`,
 
     'tool.1.desc': `
       <p>Interface unifiée pour médiation publicitaire, confidentialité et analytique :</p>
       <ul>
-        <li>Façade unifiant analytique et médiation publicitaire.</li>
-        <li>Centre de confidentialité conforme IAB TCF - gestion des préférences et suppressions de données.</li>
-        <li>Hub analytique multi-SDK pour distribution d'événements entre fournisseurs.</li>
-        <li>Médiation publicitaire avancée - logique Crazyfall, multi-réseaux.</li>
-        <li>Balises dynamiques pour placements publicitaires flexibles.</li>
-        <li>Tests A/B pour l'optimisation publicitaire.</li>
+        <li>Création d'une façade unifiant l'analytique et la médiation publicitaire.</li>
+        <li>Développement d'un centre de confidentialité conforme IAB TCF, permettant la gestion des préférences et les suppressions de données.</li>
+        <li>Développement d'un hub analytique multi-SDK pour la distribution des événements entre fournisseurs.</li>
+        <li>Implémentation d'une médiation publicitaire avancée basée sur la logique Crazyfall, multi-réseaux.</li>
+        <li>Configuration de balises dynamiques pour des placements publicitaires flexibles.</li>
+        <li>Mise en place de tests A/B pour l'optimisation publicitaire.</li>
       </ul>`,
 
     // ── Formation ─────────────────────────────────────────────────────────────
@@ -292,7 +292,7 @@ const TRANSLATIONS = {
     // ── Bénévolat ─────────────────────────────────────────────────────────────
     'vol.0.role': 'Membre, Comité consultatif du Programme',
     'vol.0.org':  'Centennial College, Canada',
-    'vol.0.desc': "Conseiller le collège sur les tendances du secteur, la pertinence du curriculum et les besoins en compétences de l'industrie",
+    'vol.0.desc': "Conseil au collège sur les tendances du secteur, la pertinence du curriculum et les besoins en compétences de l'industrie",
     'vol.1.role': 'Force Aérienne Brésilienne',
     'vol.1.org':  'Carandaí, Minas Gerais, Brésil',
     'vol.1.desc': "Aide humanitaire aux sinistrés lors d'une catastrophe naturelle",
