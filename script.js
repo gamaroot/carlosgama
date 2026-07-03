@@ -91,6 +91,8 @@ function adjustCarouselHeight(carouselId) {
 // ── Profile Picture Video ─────────────────────────────────────────────────────
 function updateProfileVideoSource(lang) {
     const video = document.querySelector('#profileVideo');
+    const badge = document.querySelector('#profileLangBadge');
+    if (badge) badge.textContent = lang.toUpperCase();
     if (!video) return;
 
     const source = video.querySelector('source');
