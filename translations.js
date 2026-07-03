@@ -147,6 +147,7 @@ const TRANSLATIONS = {
     'lang.french':     'French',
     'lang.native':     'Native',
     'lang.advanced':   'Advanced',
+	'lang.intermediate-advanced': 'Intermediate-Advanced',
     'lang.cert':       'Certificate',
 
     // ── Carousel accessibility ────────────────────────────────────────────────
@@ -306,6 +307,7 @@ const TRANSLATIONS = {
     'lang.french':     'Français',
     'lang.native':     'Natif',
     'lang.advanced':   'Avancé',
+	'lang.intermediate-advanced': 'Intermédiaire-Avancé',
     'lang.cert':       'Certificat',
 
     // ── Accessibilité carrousel ───────────────────────────────────────────────
