@@ -152,6 +152,9 @@ const TRANSLATIONS = {
     // ── Carousel accessibility ────────────────────────────────────────────────
     'carousel.prev': 'Previous',
     'carousel.next': 'Next',
+
+    // ── Resume ────────────────────────────────────────────────────────────────
+    'contact.resume': 'Download PDF',
   },
 
   // ════════════════════════════════════════════════════════════════════════════
@@ -308,5 +311,8 @@ const TRANSLATIONS = {
     // ── Accessibilité carrousel ───────────────────────────────────────────────
     'carousel.prev': 'Précédent',
     'carousel.next': 'Suivant',
+
+    // ── CV ────────────────────────────────────────────────────────────────────
+    'contact.resume': 'Télécharger le PDF',
   },
 };

@@ -104,6 +104,16 @@ function updateProfileVideoSource(lang) {
     if (wasPlaying) video.play().catch(() => {});
 }
 
+function updateResumeLink(lang) {
+    const link = document.querySelector('#resumeLink');
+    if (!link) return;
+
+    const docId = lang === 'en'
+        ? '1W79tZSdtt3TiIp1oQlbfJEDQma743wx1hNgw2YiYUDQ'
+        : '1JrtTtS40LW82AOgK0OivE0bD-Lw-jKCVPixgkK8-jm0';
+    link.setAttribute('href', `https://docs.google.com/document/d/${docId}/export?format=pdf`);
+}
+
 function initProfileVideo() {
     const wrapper = document.querySelector('#profilePictureWrapper');
     const video   = document.querySelector('#profileVideo');
@@ -178,6 +188,7 @@ function setTranslations(lang) {
         btn.classList.toggle('active', btn.dataset.lang === lang);
     });
     updateProfileVideoSource(lang);
+    updateResumeLink(lang);
     localStorage.setItem('lang', lang);
 }
 
