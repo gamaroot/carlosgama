@@ -18,13 +18,22 @@
         </div>
         <div class="header-content">
             <div class="header-main">
-                <div class="profile-picture-wrapper" id="profilePictureWrapper" role="button" tabindex="0" aria-label="Play video">
-                    <img src="./assets/profile.jpg" alt="Carlos Gama" class="profile-picture" id="profileImage">
-                    <video class="profile-video" id="profileVideo" playsinline preload="none">
-                        <source src="./assets/french.mp4" type="video/mp4">
-                    </video>
-                    <div class="profile-play-icon" id="profilePlayIcon"><i class="bi bi-play-fill"></i></div>
-                    <div class="profile-lang-badge" id="profileLangBadge">EN</div>
+                <div class="profile-picture-outer">
+                    <div class="profile-picture-wrapper" id="profilePictureWrapper" role="button" tabindex="0" aria-label="Play video">
+                        <img src="./assets/profile.jpg" alt="Carlos Gama" class="profile-picture" id="profileImage">
+                        <video class="profile-video" id="profileVideo" playsinline preload="none">
+                            <source src="./assets/french.mp4" type="video/mp4">
+                        </video>
+                        <div class="profile-play-icon" id="profilePlayIcon"><i class="bi bi-play-fill"></i></div>
+                        <div class="profile-lang-badge" id="profileLangBadge">EN</div>
+                    </div>
+                    <div class="coach-mark" id="coachMark" aria-hidden="true">
+                        <svg class="coach-mark-arrow" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+                            <path class="coach-mark-arrow-path" d="M40,50 C100,20 30,4 62,10" fill="none" stroke-linecap="round" />
+                            <path class="coach-mark-arrowhead" d="M62,10 L52,5 L55,16 M62,10" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="coach-mark-label" data-i18n="coachmark.text">Click for a video intro</span>
+                    </div>
                 </div>
                 <div class="profile-info">
                     <div class="name-title">
@@ -49,10 +58,10 @@
                             <i class="bi bi-envelope-fill contact-icon"></i>
                             <a href="mailto:gamaroot@gmail.com" class="contact-link">gamaroot@gmail.com</a>
                         </div>
-                        <div class="contact-item">
+                        <!--<div class="contact-item">
                             <i class="bi bi-file-earmark-pdf-fill contact-icon"></i>
                             <a href="https://docs.google.com/document/d/1W79tZSdtt3TiIp1oQlbfJEDQma743wx1hNgw2YiYUDQ/export?format=pdf" target="_blank" rel="noopener" id="resumeLink" class="contact-link" data-i18n="contact.resume">Download PDF</a>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>

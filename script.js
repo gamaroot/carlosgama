@@ -151,6 +151,24 @@ function initProfileVideo() {
     video.addEventListener('ended', stop);
 }
 
+// ── Coach Mark ─────────────────────────────────────────────────────────────
+function initCoachMark() {
+    const coachMark = document.querySelector('#coachMark');
+    const wrapper   = document.querySelector('#profilePictureWrapper');
+    if (!coachMark || !wrapper) return;
+
+    let dismissed = false;
+    const dismiss = () => {
+        if (dismissed) return;
+        dismissed = true;
+        coachMark.classList.add('coach-mark-dismiss');
+        setTimeout(() => coachMark.remove(), 250);
+    };
+
+    setTimeout(dismiss, 5000);
+    wrapper.addEventListener('click', dismiss, { once: true });
+}
+
 // ── Banner Zoom Wrapper ───────────────────────────────────────────────────────
 function initBannerWrappers() {
     document.querySelectorAll('.project-banner').forEach(img => {
@@ -219,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTypewriter();
     initCarouselCounters();
     initProfileVideo();
+    initCoachMark();
     initBannerWrappers();
     initScrollReveal();
     initI18n();

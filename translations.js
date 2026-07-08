@@ -4,6 +4,8 @@ const TRANSLATIONS = {
     'header.role': 'Software Engineer',
     'header.specialization': 'Mobile Game &amp; App Development',
 
+    'coachmark.text': 'Click for a video intro',
+
     'section.summary':    'Summary of Qualifications',
     'section.experience': 'Professional Experience',
     'section.games':      'Games',
@@ -164,6 +166,8 @@ const TRANSLATIONS = {
     'header.role': 'Ingénieur Logiciel',
     'header.specialization': 'Développement de Jeux Mobiles &amp; Applications',
 
+    'coachmark.text': 'Cliquez pour une vidéo de présentation',
+
     'section.summary':    'Résumé des Qualifications',
     'section.experience': 'Expérience Professionnelle',
     'section.games':      'Jeux Vidéo',
@@ -186,7 +190,7 @@ const TRANSLATIONS = {
 
     'exp.1.title': 'Développeur de Jeux Mobiles',
     'exp.1.bullets': `
-      <li>Développement de Buraco Jogatina (jeu de cartes n°1 au Brésil) et d'autres jeux mobiles avec Unity, Lua, AndEngine, Java/Kotlin et Objective-C.</li>
+      <li>Développement de Buraco Jogatina et d'autres jeux mobiles avec Unity, Lua, AndEngine, Java/Kotlin et Objective-C.</li>
       <li>Création d'AutoBuilder (JavaFX + Bash) pour automatiser les builds Android/iOS.</li>
       <li>Gestion du gameplay, du multijoueur, des publicités et de l'analytique via Unity et SmartFox.</li>`,
 
