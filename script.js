@@ -157,11 +157,14 @@ function initCoachMark() {
     const wrapper   = document.querySelector('#profilePictureWrapper');
     if (!coachMark || !wrapper) return;
 
+    wrapper.classList.add('coach-mark-active');
+
     let dismissed = false;
     const dismiss = () => {
         if (dismissed) return;
         dismissed = true;
         coachMark.classList.add('coach-mark-dismiss');
+        wrapper.classList.remove('coach-mark-active');
         setTimeout(() => coachMark.remove(), 250);
     };
 

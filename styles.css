@@ -580,7 +580,8 @@ a:hover::after {
 }
 
 .profile-picture-wrapper:hover .profile-play-icon,
-.profile-picture-wrapper:focus-visible .profile-play-icon {
+.profile-picture-wrapper:focus-visible .profile-play-icon,
+.profile-picture-wrapper.coach-mark-active .profile-play-icon {
     opacity: 1;
 }
 
@@ -645,7 +646,7 @@ a:hover::after {
 .coach-mark-arrowhead {
     stroke: #fff;
     stroke-width: 3;
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+    filter: url(#coachMarkArrowOutline) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
 }
 
 .coach-mark-arrow-path {
@@ -925,12 +926,18 @@ section.visible .section-title::after {
         width: 100%;
     }
 
-    .profile-picture-wrapper {
-        display: none;
+    .coach-mark {
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
     }
 
-    .coach-mark {
-        display: none;
+    .coach-mark-arrow {
+        margin-left: 0;
+    }
+
+    .coach-mark.coach-mark-dismiss {
+        transform: translateX(-50%) translateY(-4px);
     }
 
     .contact-section {

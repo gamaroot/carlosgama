@@ -29,6 +29,17 @@
                     </div>
                     <div class="coach-mark" id="coachMark" aria-hidden="true">
                         <svg class="coach-mark-arrow" viewBox="0 0 80 60" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="coachMarkArrowOutline" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feMorphology in="SourceGraphic" operator="dilate" radius="1.6" result="dilated" />
+                                    <feFlood flood-color="#000" flood-opacity="0.85" result="outline-color" />
+                                    <feComposite in="outline-color" in2="dilated" operator="in" result="outline" />
+                                    <feMerge>
+                                        <feMergeNode in="outline" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
                             <path class="coach-mark-arrow-path" d="M40,50 C100,20 30,4 62,10" fill="none" stroke-linecap="round" />
                             <path class="coach-mark-arrowhead" d="M62,10 L52,5 L55,16 M62,10" fill="none" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
